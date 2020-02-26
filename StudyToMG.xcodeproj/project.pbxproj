@@ -56,15 +56,55 @@
 		76BE44402406732E004430B7 /* StudyToMG */ = {
 			isa = PBXGroup;
 			children = (
-				76BE44412406732E004430B7 /* AppDelegate.swift */,
-				76BE44432406732E004430B7 /* SceneDelegate.swift */,
-				76BE44452406732E004430B7 /* ViewController.swift */,
-				76BE44472406732E004430B7 /* Main.storyboard */,
-				76BE444A24067330004430B7 /* Assets.xcassets */,
-				76BE444C24067330004430B7 /* LaunchScreen.storyboard */,
-				76BE444F24067330004430B7 /* Info.plist */,
+				76BE445524067415004430B7 /* Resource */,
+				76BE445624067430004430B7 /* AppDelegate */,
+				76BE44572406743F004430B7 /* Application */,
 			);
 			path = StudyToMG;
+			sourceTree = "<group>";
+		};
+		76BE445524067415004430B7 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				76BE444A24067330004430B7 /* Assets.xcassets */,
+				76BE444F24067330004430B7 /* Info.plist */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		76BE445624067430004430B7 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				76BE44412406732E004430B7 /* AppDelegate.swift */,
+				76BE44432406732E004430B7 /* SceneDelegate.swift */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		76BE44572406743F004430B7 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				76BE445924067452004430B7 /* Main */,
+				76BE445824067446004430B7 /* Launch */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		76BE445824067446004430B7 /* Launch */ = {
+			isa = PBXGroup;
+			children = (
+				76BE444C24067330004430B7 /* LaunchScreen.storyboard */,
+			);
+			path = Launch;
+			sourceTree = "<group>";
+		};
+		76BE445924067452004430B7 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				76BE44472406732E004430B7 /* Main.storyboard */,
+				76BE44452406732E004430B7 /* ViewController.swift */,
+			);
+			path = Main;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -286,7 +326,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 994BWAVX9G;
-				INFOPLIST_FILE = StudyToMG/Info.plist;
+				INFOPLIST_FILE = StudyToMG/Resource/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -294,7 +335,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.Moonift.StudyToMG;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -304,7 +345,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 994BWAVX9G;
-				INFOPLIST_FILE = StudyToMG/Info.plist;
+				INFOPLIST_FILE = StudyToMG/Resource/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -312,7 +354,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.Moonift.StudyToMG;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
