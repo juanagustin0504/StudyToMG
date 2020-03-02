@@ -9,7 +9,7 @@
 import Foundation
 
 class MGViewModel {
-    var mgResposneOjb: MGModel.MGResponse? = nil
+    var mgResponseObj: MGModel.MGResponse? = nil
     
     func mg(completion: @escaping (NSError?) -> Void) {
         let api = "https://sportal-dev.bizplay.co.kr/MgGate?master_id=I_SEMO_G_1_v1.0.6"
@@ -22,7 +22,7 @@ class MGViewModel {
             case .success(let responseObj):
                 print("==============================RESPONSE==============================")
                 print(responseObj)
-                self.mgResposneOjb = responseObj
+                self.mgResponseObj = responseObj
                 completion(nil)
             }
         }

@@ -18,6 +18,7 @@
 		76BE4465240CC8C5004430B7 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76BE4464240CC8C5004430B7 /* MainViewController.swift */; };
 		76BE4468240CFAF4004430B7 /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76BE4467240CFAF4004430B7 /* LoginModel.swift */; };
 		76BE446A240CFFD8004430B7 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76BE4469240CFFD8004430B7 /* LoginViewModel.swift */; };
+		76BE446C240D0214004430B7 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76BE446B240D0214004430B7 /* LoginViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		76BE4464240CC8C5004430B7 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		76BE4467240CFAF4004430B7 /* LoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
 		76BE4469240CFFD8004430B7 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		76BE446B240D0214004430B7 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,6 +144,7 @@
 			children = (
 				76BE4467240CFAF4004430B7 /* LoginModel.swift */,
 				76BE4469240CFFD8004430B7 /* LoginViewModel.swift */,
+				76BE446B240D0214004430B7 /* LoginViewController.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -217,6 +220,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				76BE446C240D0214004430B7 /* LoginViewController.swift in Sources */,
 				76BE4460240CC1E7004430B7 /* MGViewModel.swift in Sources */,
 				76BE4468240CFAF4004430B7 /* LoginModel.swift in Sources */,
 				76BE4463240CC20E004430B7 /* DataAccess.swift in Sources */,

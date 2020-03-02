@@ -23,18 +23,18 @@ class MainViewController: UIViewController {
                 return
             }
             
+            DispatchQueue.main.async {
+                self.showLoginScreen()
+            }
+            
+            
         }
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    //MARK: - custom method -
+    func showLoginScreen() {
+        let loginVC = self.storyboard?.instantiateViewController(withIdentifier: "LoginViewController") as! LoginViewController
+        self.navigationController?.pushViewController(loginVC, animated: true)
+        
     }
-    */
-
 }
