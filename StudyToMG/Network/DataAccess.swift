@@ -51,7 +51,7 @@ class DataAccess {
                 completion(.failure(decodeError))
             }
             
-        }
+        }.resume()
         
     }
 }

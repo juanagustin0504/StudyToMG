@@ -19,6 +19,8 @@ class MGViewModel {
             case .failure(let error):
                 completion(error)
             case .success(let responseObj):
+                print("====================RESPONSE====================")
+                print(responseObj)
                 self.mgResposneOjb = responseObj
                 completion(nil)
             }
