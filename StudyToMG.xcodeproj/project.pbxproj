@@ -16,6 +16,8 @@
 		76BE4460240CC1E7004430B7 /* MGViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76BE445F240CC1E7004430B7 /* MGViewModel.swift */; };
 		76BE4463240CC20E004430B7 /* DataAccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76BE4462240CC20E004430B7 /* DataAccess.swift */; };
 		76BE4465240CC8C5004430B7 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76BE4464240CC8C5004430B7 /* MainViewController.swift */; };
+		76BE4468240CFAF4004430B7 /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76BE4467240CFAF4004430B7 /* LoginModel.swift */; };
+		76BE446A240CFFD8004430B7 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76BE4469240CFFD8004430B7 /* LoginViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		76BE445F240CC1E7004430B7 /* MGViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MGViewModel.swift; sourceTree = "<group>"; };
 		76BE4462240CC20E004430B7 /* DataAccess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataAccess.swift; sourceTree = "<group>"; };
 		76BE4464240CC8C5004430B7 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		76BE4467240CFAF4004430B7 /* LoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
+		76BE4469240CFFD8004430B7 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +113,7 @@
 			isa = PBXGroup;
 			children = (
 				76BE445A24067620004430B7 /* MG */,
+				76BE4466240CFAE5004430B7 /* Login */,
 				76BE44472406732E004430B7 /* Main.storyboard */,
 				76BE4464240CC8C5004430B7 /* MainViewController.swift */,
 			);
@@ -130,6 +135,15 @@
 				76BE4462240CC20E004430B7 /* DataAccess.swift */,
 			);
 			path = Network;
+			sourceTree = "<group>";
+		};
+		76BE4466240CFAE5004430B7 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				76BE4467240CFAF4004430B7 /* LoginModel.swift */,
+				76BE4469240CFFD8004430B7 /* LoginViewModel.swift */,
+			);
+			path = Login;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -204,8 +218,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				76BE4460240CC1E7004430B7 /* MGViewModel.swift in Sources */,
+				76BE4468240CFAF4004430B7 /* LoginModel.swift in Sources */,
 				76BE4463240CC20E004430B7 /* DataAccess.swift in Sources */,
 				76BE44422406732E004430B7 /* AppDelegate.swift in Sources */,
+				76BE446A240CFFD8004430B7 /* LoginViewModel.swift in Sources */,
 				76BE4465240CC8C5004430B7 /* MainViewController.swift in Sources */,
 				76BE44442406732E004430B7 /* SceneDelegate.swift in Sources */,
 				76BE445E24067653004430B7 /* MGModel.swift in Sources */,

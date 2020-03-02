@@ -30,7 +30,7 @@ struct MGModel {
                 let _master_id                  : String
                 
                 let c_act                       : String
-                let c_site_url                  : String
+                let c_site_url                  : String // 로그인 url
                 let c_update_act                : String
                 let c_minimum_ver               : String
                 let c_program_ver               : String

@@ -59,4 +59,52 @@ class DataAccess {
         }.resume()
         
     }
+    
+    func fetch<I: Encodable, O: Decodable>(api: String,
+                                           requestBody: I,
+                                           responseType: O.Type,
+                                           completion: @escaping (Result<O, NSError>) -> Void) {
+        guard let URL = URL(string: api) else {
+            return
+        }
+        
+        let session = URLSession(configuration: .default)
+        
+        var request = URLRequest(url: URL)
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        request.httpMethod = "POST"
+        request.httpBody = try? JSONEncoder().encode(requestBody)
+        
+        print("==============================REQUEST==============================")
+        print(request)
+        
+        session.dataTask(with: request) { (data, response, error) in
+            if error != nil {
+                completion(.failure(error! as NSError))
+                return
+            }
+            
+            guard let data = data else {
+                let dataError = NSError(domain: "data binding Error", code: 1001, userInfo: [:])
+                completion(.failure(dataError))
+                return
+            }
+            
+            guard let dataString = String(data: data, encoding: .utf8) else { return }
+            guard let decodeString = dataString.removingPercentEncoding else { return }
+            print("decodeString::::::\(decodeString)")
+            guard let dataResult = decodeString.data(using: .utf8) else { return }
+            
+            do {
+                let responseObj = try JSONDecoder().decode(responseType.self, from: dataResult)
+                print("==============================RESPONSE==============================")
+                print(responseObj)
+                completion(.success(responseObj))
+                
+            } catch {
+                let decodeError = NSError(domain: "decode error", code: 1002, userInfo: [:])
+                completion(.failure(decodeError))
+            }
+        }.resume()
+    }
 }
