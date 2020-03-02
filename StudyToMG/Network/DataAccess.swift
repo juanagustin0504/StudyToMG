@@ -26,7 +26,8 @@ class DataAccess {
             return
         }
         
-        let session = URLSession.init(configuration: .default)
+        
+        let session = URLSession(configuration: .default)
         
         session.dataTask(with: URL) { (data, response, error) in
             if error != nil {
@@ -41,10 +42,14 @@ class DataAccess {
             }
             
             guard let dataString = String(data: data, encoding: .utf8) else { return }
-            guard let dataResult = dataString.data(using: .utf8) else { return }
+//            print("dataString:::::\(dataString)")
+            guard let decodeString = dataString.removingPercentEncoding else { return }
+            print("decodeString::::::\(decodeString)")
+            guard let dataResult = decodeString.data(using: .utf8) else { return }
+            print("dataResult::::::\(dataResult)")
             
             do {
-                let responseObj = try JSONDecoder().decode(responseType, from: dataResult)
+                let responseObj = try JSONDecoder().decode(responseType.self, from: dataResult)
                 completion(.success(responseObj))
             } catch {
                 let decodeError = NSError(domain: "decode error", code: 1002, userInfo: [:])
