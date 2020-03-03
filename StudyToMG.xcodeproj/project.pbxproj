@@ -19,6 +19,8 @@
 		76BE4468240CFAF4004430B7 /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76BE4467240CFAF4004430B7 /* LoginModel.swift */; };
 		76BE446A240CFFD8004430B7 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76BE4469240CFFD8004430B7 /* LoginViewModel.swift */; };
 		76BE446C240D0214004430B7 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76BE446B240D0214004430B7 /* LoginViewController.swift */; };
+		76BE446F240D0C1B004430B7 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76BE446E240D0C1B004430B7 /* Request.swift */; };
+		76BE4473240D0C6E004430B7 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76BE4472240D0C6E004430B7 /* Response.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +38,8 @@
 		76BE4467240CFAF4004430B7 /* LoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
 		76BE4469240CFFD8004430B7 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		76BE446B240D0214004430B7 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		76BE446E240D0C1B004430B7 /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
+		76BE4472240D0C6E004430B7 /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +72,7 @@
 		76BE44402406732E004430B7 /* StudyToMG */ = {
 			isa = PBXGroup;
 			children = (
+				76BE446D240D0C11004430B7 /* Common */,
 				76BE4461240CC1F2004430B7 /* Network */,
 				76BE445524067415004430B7 /* Resource */,
 				76BE445624067430004430B7 /* AppDelegate */,
@@ -149,6 +154,15 @@
 			path = Login;
 			sourceTree = "<group>";
 		};
+		76BE446D240D0C11004430B7 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				76BE446E240D0C1B004430B7 /* Request.swift */,
+				76BE4472240D0C6E004430B7 /* Response.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -227,6 +241,8 @@
 				76BE44422406732E004430B7 /* AppDelegate.swift in Sources */,
 				76BE446A240CFFD8004430B7 /* LoginViewModel.swift in Sources */,
 				76BE4465240CC8C5004430B7 /* MainViewController.swift in Sources */,
+				76BE4473240D0C6E004430B7 /* Response.swift in Sources */,
+				76BE446F240D0C1B004430B7 /* Request.swift in Sources */,
 				76BE44442406732E004430B7 /* SceneDelegate.swift in Sources */,
 				76BE445E24067653004430B7 /* MGModel.swift in Sources */,
 			);

@@ -18,9 +18,6 @@ class LoginViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         let mgResponseObj = mgViewModel.mgResponseObj
-//        loginViewModel.requestLogin(USER_GB: <#T##String#>, USER_ID: <#T##String#>, USER_PW: <#T##String#>, APP_OS: <#T##String#>, APP_VER: <#T##String#>, INST_YN: <#T##String#>) { (error) in
-//            
-//        }
         
     }
     
