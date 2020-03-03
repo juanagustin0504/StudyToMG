@@ -8,7 +8,6 @@
 
 import Foundation
 
-// Login API : http://devsemo.wecontent.co.kr/SEMOGate.do
 struct LoginModel {
     
     struct Request: Encodable {
@@ -36,33 +35,24 @@ struct LoginModel {
     }
     
     struct Response: Decodable {
-        let PAGE_NO : String
-        let PAGE_SZ : String
-        let CTNU_YN : String
-        let RSLT_CD : String
-        let RSLT_MSG: String
-        let REC     : [REC]
         
-        struct REC: Decodable {
-            let BIZ_NO      : String
-            let TX_AMT      : String
-            let REG_DTM     : String
-            let APPR_CONT   : String
-            let BZAQ_NM     : String
-            let PAY_TYPE_CD : String
-            let SPLY_AMT    : String
-            let FILE_URL    : String
-            let ITEM_TAX    : String
-            let TRSC_WEEK   : String
-            let STTS        : String
-            let REG_SEQ_NO  : String
-            let TRSC_TM     : String
-            let TX_SEQ      : String
-            let USER_NM     : String
-            let INQ_GRP     : String
-            let TRSC_DT     : String
-            let RCPT_TYPE   : String
-        }
+        let RINST_CERT_YN   : String?
+        let BSNN_NO         : String?
+        let USER_LOGN_NO    : String?
+        let USER_ID         : String?
+        let USE_INTT_ID     : String?
+        let AC_REG_YN       : String?
+        let ADRS            : String?
+        let TPBS_DIV        : String?
+        let CLPH_NO         : String?
+        let SETL_DIV        : String?
+        let PROD_CD         : String?
+        let BSNN_NM         : String?
+        let CERT_EXPI_STTS  : String?
+        let CERT_YN         : String?
+        let USER_NM         : String?
+        let RINST_CERT_TYPE : String?
+        let EMAIL_YN        : String?
 
     }
     

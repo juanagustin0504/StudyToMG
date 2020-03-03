@@ -64,19 +64,23 @@ class DataAccess {
                                            requestBody: I,
                                            responseType: O.Type,
                                            completion: @escaping (Result<O, NSError>) -> Void) {
-        guard let URL = URL(string: api) else {
+          
+        guard let URL = URL(string: "http://devsemo.wecontent.co.kr/SEMOGate.do") else {
             return
         }
         
+        let requestData = Request(CNTS_CRTS_KEY: "d18b0e32-4f3f-408e-ba27-d106a67ec98b",
+                                  TRAN_NO: api,
+                                  DEVICE_INST_ID: "DEVICE_INST_ID",
+                                  ENC_YN: "",
+                                  REQ_DATA: requestBody)
+
         let session = URLSession(configuration: .default)
         
         var request = URLRequest(url: URL)
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
         request.httpMethod = "POST"
-        request.httpBody = try? JSONEncoder().encode(requestBody)
-        
-        print("==============================REQUEST==============================")
-        print(request)
+        request.httpBody = try? JSONEncoder().encode(requestData)
         
         session.dataTask(with: request) { (data, response, error) in
             if error != nil {
@@ -99,11 +103,11 @@ class DataAccess {
                 let responseObj = try JSONDecoder().decode(responseType.self, from: dataResult)
                 print("==============================RESPONSE==============================")
                 print(responseObj)
+                print("====================================================================")
                 completion(.success(responseObj))
                 
             } catch {
-                let decodeError = NSError(domain: "decode error", code: 1002, userInfo: [:])
-                completion(.failure(decodeError))
+                completion(.failure(error as NSError))
             }
         }.resume()
     }
