@@ -15,7 +15,19 @@
                     <view key="view" contentMode="scaleToFill" id="17v-KN-Pzo">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="기타영수증" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bzN-jb-85j">
+                                <rect key="frame" x="150.5" y="323" width="74" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="bzN-jb-85j" firstAttribute="centerY" secondItem="17v-KN-Pzo" secondAttribute="centerY" id="qW5-9R-JKJ"/>
+                            <constraint firstItem="bzN-jb-85j" firstAttribute="centerX" secondItem="17v-KN-Pzo" secondAttribute="centerX" id="wcN-RY-xVE"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="mF4-bM-B5g"/>
                     </view>
                 </viewController>

@@ -25,6 +25,10 @@
 		76BE4477240E4DE7004430B7 /* Type.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76BE4476240E4DE7004430B7 /* Type.swift */; };
 		76BE447B240E59B5004430B7 /* Receipt.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76BE447A240E59B5004430B7 /* Receipt.storyboard */; };
 		76BE447D240E59C1004430B7 /* MultiReceipt.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76BE447C240E59C1004430B7 /* MultiReceipt.storyboard */; };
+		76BE447F240E5D1E004430B7 /* ReceiptViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76BE447E240E5D1E004430B7 /* ReceiptViewController.swift */; };
+		76BE4481240E5D2A004430B7 /* MultiReceiptViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76BE4480240E5D2A004430B7 /* MultiReceiptViewController.swift */; };
+		76BE4487240E5FA1004430B7 /* ReceiptCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76BE4486240E5FA1004430B7 /* ReceiptCell.swift */; };
+		76BE4489240E5FC6004430B7 /* MultiReceiptCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76BE4488240E5FC6004430B7 /* MultiReceiptCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +52,10 @@
 		76BE4476240E4DE7004430B7 /* Type.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Type.swift; sourceTree = "<group>"; };
 		76BE447A240E59B5004430B7 /* Receipt.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Receipt.storyboard; sourceTree = "<group>"; };
 		76BE447C240E59C1004430B7 /* MultiReceipt.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MultiReceipt.storyboard; sourceTree = "<group>"; };
+		76BE447E240E5D1E004430B7 /* ReceiptViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiptViewController.swift; sourceTree = "<group>"; };
+		76BE4480240E5D2A004430B7 /* MultiReceiptViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiReceiptViewController.swift; sourceTree = "<group>"; };
+		76BE4486240E5FA1004430B7 /* ReceiptCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiptCell.swift; sourceTree = "<group>"; };
+		76BE4488240E5FC6004430B7 /* MultiReceiptCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiReceiptCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -178,7 +186,9 @@
 		76BE4478240E579A004430B7 /* Receipt */ = {
 			isa = PBXGroup;
 			children = (
+				76BE4482240E5F66004430B7 /* CustomCell */,
 				76BE447A240E59B5004430B7 /* Receipt.storyboard */,
+				76BE447E240E5D1E004430B7 /* ReceiptViewController.swift */,
 			);
 			path = Receipt;
 			sourceTree = "<group>";
@@ -186,9 +196,27 @@
 		76BE4479240E5993004430B7 /* MultiReceipt */ = {
 			isa = PBXGroup;
 			children = (
+				76BE4483240E5F74004430B7 /* CustomCell */,
 				76BE447C240E59C1004430B7 /* MultiReceipt.storyboard */,
+				76BE4480240E5D2A004430B7 /* MultiReceiptViewController.swift */,
 			);
 			path = MultiReceipt;
+			sourceTree = "<group>";
+		};
+		76BE4482240E5F66004430B7 /* CustomCell */ = {
+			isa = PBXGroup;
+			children = (
+				76BE4486240E5FA1004430B7 /* ReceiptCell.swift */,
+			);
+			path = CustomCell;
+			sourceTree = "<group>";
+		};
+		76BE4483240E5F74004430B7 /* CustomCell */ = {
+			isa = PBXGroup;
+			children = (
+				76BE4488240E5FC6004430B7 /* MultiReceiptCell.swift */,
+			);
+			path = CustomCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -271,10 +299,14 @@
 				76BE4463240CC20E004430B7 /* DataAccess.swift in Sources */,
 				76BE44422406732E004430B7 /* AppDelegate.swift in Sources */,
 				76BE446A240CFFD8004430B7 /* LoginViewModel.swift in Sources */,
+				76BE4489240E5FC6004430B7 /* MultiReceiptCell.swift in Sources */,
 				76BE4477240E4DE7004430B7 /* Type.swift in Sources */,
+				76BE4487240E5FA1004430B7 /* ReceiptCell.swift in Sources */,
 				76BE4465240CC8C5004430B7 /* MainViewController.swift in Sources */,
 				76BE4473240D0C6E004430B7 /* Response.swift in Sources */,
 				76BE446F240D0C1B004430B7 /* Request.swift in Sources */,
+				76BE4481240E5D2A004430B7 /* MultiReceiptViewController.swift in Sources */,
+				76BE447F240E5D1E004430B7 /* ReceiptViewController.swift in Sources */,
 				76BE44442406732E004430B7 /* SceneDelegate.swift in Sources */,
 				76BE445E24067653004430B7 /* MGModel.swift in Sources */,
 			);
