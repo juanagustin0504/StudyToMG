@@ -64,13 +64,14 @@ class DataAccess {
                                            requestBody: I,
                                            responseType: O.Type,
                                            completion: @escaping (Result<O, NSError>) -> Void) {
-        guard let URL = URL(string: SharedInstance.shared.c_site_url + "/SEMOGate.do") else {
+        
+        guard let URL = URL(string: Type.Base_URL) else {
             return
         }
         
-        let requestData = Request(CNTS_CRTS_KEY: "d18b0e32-4f3f-408e-ba27-d106a67ec98b",
+        let requestData = Request(CNTS_CRTS_KEY: Key.CNTS_CRTS_KEY.rawValue,
                                   TRAN_NO: api,
-                                  DEVICE_INST_ID: "DEVICE_INST_ID",
+                                  DEVICE_INST_ID: Key.DEVICE_INST_ID.rawValue,
                                   ENC_YN: "",
                                   REQ_DATA: requestBody)
         

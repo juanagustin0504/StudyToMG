@@ -22,6 +22,7 @@
 		76BE446F240D0C1B004430B7 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76BE446E240D0C1B004430B7 /* Request.swift */; };
 		76BE4473240D0C6E004430B7 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76BE4472240D0C6E004430B7 /* Response.swift */; };
 		76BE4475240E4A38004430B7 /* SharedInstance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76BE4474240E4A38004430B7 /* SharedInstance.swift */; };
+		76BE4477240E4DE7004430B7 /* Type.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76BE4476240E4DE7004430B7 /* Type.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		76BE446E240D0C1B004430B7 /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
 		76BE4472240D0C6E004430B7 /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
 		76BE4474240E4A38004430B7 /* SharedInstance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedInstance.swift; sourceTree = "<group>"; };
+		76BE4476240E4DE7004430B7 /* Type.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Type.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,6 +164,7 @@
 				76BE446E240D0C1B004430B7 /* Request.swift */,
 				76BE4472240D0C6E004430B7 /* Response.swift */,
 				76BE4474240E4A38004430B7 /* SharedInstance.swift */,
+				76BE4476240E4DE7004430B7 /* Type.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -244,6 +247,7 @@
 				76BE4463240CC20E004430B7 /* DataAccess.swift in Sources */,
 				76BE44422406732E004430B7 /* AppDelegate.swift in Sources */,
 				76BE446A240CFFD8004430B7 /* LoginViewModel.swift in Sources */,
+				76BE4477240E4DE7004430B7 /* Type.swift in Sources */,
 				76BE4465240CC8C5004430B7 /* MainViewController.swift in Sources */,
 				76BE4473240D0C6E004430B7 /* Response.swift in Sources */,
 				76BE446F240D0C1B004430B7 /* Request.swift in Sources */,
