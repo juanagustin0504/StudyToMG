@@ -23,6 +23,8 @@
 		76BE4473240D0C6E004430B7 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76BE4472240D0C6E004430B7 /* Response.swift */; };
 		76BE4475240E4A38004430B7 /* SharedInstance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76BE4474240E4A38004430B7 /* SharedInstance.swift */; };
 		76BE4477240E4DE7004430B7 /* Type.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76BE4476240E4DE7004430B7 /* Type.swift */; };
+		76BE447B240E59B5004430B7 /* Receipt.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76BE447A240E59B5004430B7 /* Receipt.storyboard */; };
+		76BE447D240E59C1004430B7 /* MultiReceipt.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76BE447C240E59C1004430B7 /* MultiReceipt.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +46,8 @@
 		76BE4472240D0C6E004430B7 /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
 		76BE4474240E4A38004430B7 /* SharedInstance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedInstance.swift; sourceTree = "<group>"; };
 		76BE4476240E4DE7004430B7 /* Type.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Type.swift; sourceTree = "<group>"; };
+		76BE447A240E59B5004430B7 /* Receipt.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Receipt.storyboard; sourceTree = "<group>"; };
+		76BE447C240E59C1004430B7 /* MultiReceipt.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MultiReceipt.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,10 +127,12 @@
 		76BE445924067452004430B7 /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				76BE445A24067620004430B7 /* MG */,
-				76BE4466240CFAE5004430B7 /* Login */,
 				76BE44472406732E004430B7 /* Main.storyboard */,
 				76BE4464240CC8C5004430B7 /* MainViewController.swift */,
+				76BE445A24067620004430B7 /* MG */,
+				76BE4466240CFAE5004430B7 /* Login */,
+				76BE4478240E579A004430B7 /* Receipt */,
+				76BE4479240E5993004430B7 /* MultiReceipt */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -167,6 +173,22 @@
 				76BE4476240E4DE7004430B7 /* Type.swift */,
 			);
 			path = Common;
+			sourceTree = "<group>";
+		};
+		76BE4478240E579A004430B7 /* Receipt */ = {
+			isa = PBXGroup;
+			children = (
+				76BE447A240E59B5004430B7 /* Receipt.storyboard */,
+			);
+			path = Receipt;
+			sourceTree = "<group>";
+		};
+		76BE4479240E5993004430B7 /* MultiReceipt */ = {
+			isa = PBXGroup;
+			children = (
+				76BE447C240E59C1004430B7 /* MultiReceipt.storyboard */,
+			);
+			path = MultiReceipt;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -228,8 +250,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				76BE444E24067330004430B7 /* LaunchScreen.storyboard in Resources */,
+				76BE447B240E59B5004430B7 /* Receipt.storyboard in Resources */,
 				76BE444B24067330004430B7 /* Assets.xcassets in Resources */,
 				76BE44492406732E004430B7 /* Main.storyboard in Resources */,
+				76BE447D240E59C1004430B7 /* MultiReceipt.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
