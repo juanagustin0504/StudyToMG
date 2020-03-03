@@ -8,6 +8,7 @@
 
 import Foundation
 
+// Login API : http://devsemo.wecontent.co.kr/SEMOGate.do
 struct LoginModel {
     
     struct Request: Encodable {
@@ -17,6 +18,7 @@ struct LoginModel {
         let APP_OS      : String
         let APP_VER     : String
         let INST_YN     : String
+        let RPOD_CD     : String
         let DEVICE_INFO : DEVICE_INFO
         
         struct DEVICE_INFO: Encodable {
