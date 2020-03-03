@@ -23,6 +23,7 @@ class MGViewModel {
                 print("==============================RESPONSE==============================")
                 print(responseObj)
                 self.mgResponseObj = responseObj
+                SharedInstance.shared.c_site_url = responseObj.RESP_DATA._tran_res_data[0].c_site_url
                 completion(nil)
             }
         }

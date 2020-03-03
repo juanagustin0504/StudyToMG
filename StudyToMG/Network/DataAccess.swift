@@ -42,7 +42,7 @@ class DataAccess {
             }
             
             guard let dataString = String(data: data, encoding: .utf8) else { return }
-//            print("dataString:::::\(dataString)")
+            //            print("dataString:::::\(dataString)")
             guard let decodeString = dataString.removingPercentEncoding else { return }
             print("decodeString::::::\(decodeString)")
             guard let dataResult = decodeString.data(using: .utf8) else { return }
@@ -64,8 +64,7 @@ class DataAccess {
                                            requestBody: I,
                                            responseType: O.Type,
                                            completion: @escaping (Result<O, NSError>) -> Void) {
-          
-        guard let URL = URL(string: "http://devsemo.wecontent.co.kr/SEMOGate.do") else {
+        guard let URL = URL(string: SharedInstance.shared.c_site_url + "/SEMOGate.do") else {
             return
         }
         
@@ -74,7 +73,7 @@ class DataAccess {
                                   DEVICE_INST_ID: "DEVICE_INST_ID",
                                   ENC_YN: "",
                                   REQ_DATA: requestBody)
-
+        
         let session = URLSession(configuration: .default)
         
         var request = URLRequest(url: URL)
