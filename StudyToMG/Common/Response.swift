@@ -9,8 +9,10 @@
 import Foundation
 
 struct Response<T: Decodable>: Decodable {
+    let TRAN_NO         : String
     let RSLT_CD         : String
     let RSLT_MSG        : String
-    let RSLT_PROC_GB    : String
+    let RSLT_TIME       : String
+    let RSLT_DATE       : String
     let RESP_DATA       : T
 }
