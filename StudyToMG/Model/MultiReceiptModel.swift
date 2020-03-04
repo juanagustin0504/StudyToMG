@@ -25,7 +25,7 @@ struct SCMS_METC_R007 {
             let INQ_GRP     : String // 조회그룹
             let REG_SEQ_NO  : String // 등록일련번호
             let STTS        : String // 상태
-            let RECPT_TYPE  : String // 영수증타입
+            let RCPT_TYPE   : String // 영수증타입
             let TRSC_DT     : String // 거래일자
             let TRSC_TM     : String // 거래시간
             let TRSC_WEEK   : String // 거래요일

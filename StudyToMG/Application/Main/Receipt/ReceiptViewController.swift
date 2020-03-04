@@ -9,11 +9,22 @@
 import UIKit
 
 class ReceiptViewController: UIViewController {
+    
+    let receiptViewModel: ReceiptViewModel = ReceiptViewModel()
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        receiptViewModel.request_SCMS_METC_R006(PAGE_NO: "0", PAGE_SZ: "10") { (error) in
+            if error != nil {
+                print(":::::ERROR:::::")
+                print(error!)
+            }
+            print(":::::SUCCESS:::::")
+            print(self.receiptViewModel.responseObj ?? "nil")
+            print(":::::::::::::::::")
+        }
     }
     
 
