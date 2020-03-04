@@ -29,6 +29,7 @@
 		76BE4481240E5D2A004430B7 /* MultiReceiptViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76BE4480240E5D2A004430B7 /* MultiReceiptViewController.swift */; };
 		76BE4487240E5FA1004430B7 /* ReceiptCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76BE4486240E5FA1004430B7 /* ReceiptCell.swift */; };
 		76BE4489240E5FC6004430B7 /* MultiReceiptCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76BE4488240E5FC6004430B7 /* MultiReceiptCell.swift */; };
+		76BE448D240F2FF0004430B7 /* ReceiptModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76BE448C240F2FF0004430B7 /* ReceiptModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +57,7 @@
 		76BE4480240E5D2A004430B7 /* MultiReceiptViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiReceiptViewController.swift; sourceTree = "<group>"; };
 		76BE4486240E5FA1004430B7 /* ReceiptCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiptCell.swift; sourceTree = "<group>"; };
 		76BE4488240E5FC6004430B7 /* MultiReceiptCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiReceiptCell.swift; sourceTree = "<group>"; };
+		76BE448C240F2FF0004430B7 /* ReceiptModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiptModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +94,8 @@
 				76BE4461240CC1F2004430B7 /* Network */,
 				76BE445524067415004430B7 /* Resource */,
 				76BE445624067430004430B7 /* AppDelegate */,
+				76BE448A240F2FA2004430B7 /* Model */,
+				76BE448B240F2FAC004430B7 /* ViewModel */,
 				76BE44572406743F004430B7 /* Application */,
 			);
 			path = StudyToMG;
@@ -219,6 +223,21 @@
 			path = CustomCell;
 			sourceTree = "<group>";
 		};
+		76BE448A240F2FA2004430B7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				76BE448C240F2FF0004430B7 /* ReceiptModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		76BE448B240F2FAC004430B7 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -306,6 +325,7 @@
 				76BE4473240D0C6E004430B7 /* Response.swift in Sources */,
 				76BE446F240D0C1B004430B7 /* Request.swift in Sources */,
 				76BE4481240E5D2A004430B7 /* MultiReceiptViewController.swift in Sources */,
+				76BE448D240F2FF0004430B7 /* ReceiptModel.swift in Sources */,
 				76BE447F240E5D1E004430B7 /* ReceiptViewController.swift in Sources */,
 				76BE44442406732E004430B7 /* SceneDelegate.swift in Sources */,
 				76BE445E24067653004430B7 /* MGModel.swift in Sources */,
