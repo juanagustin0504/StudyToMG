@@ -30,6 +30,7 @@
 		76BE4487240E5FA1004430B7 /* ReceiptCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76BE4486240E5FA1004430B7 /* ReceiptCell.swift */; };
 		76BE4489240E5FC6004430B7 /* MultiReceiptCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76BE4488240E5FC6004430B7 /* MultiReceiptCell.swift */; };
 		76BE448D240F2FF0004430B7 /* ReceiptModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76BE448C240F2FF0004430B7 /* ReceiptModel.swift */; };
+		76BE4491240F3268004430B7 /* MultiReceiptModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76BE4490240F3268004430B7 /* MultiReceiptModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +59,7 @@
 		76BE4486240E5FA1004430B7 /* ReceiptCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiptCell.swift; sourceTree = "<group>"; };
 		76BE4488240E5FC6004430B7 /* MultiReceiptCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiReceiptCell.swift; sourceTree = "<group>"; };
 		76BE448C240F2FF0004430B7 /* ReceiptModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiptModel.swift; sourceTree = "<group>"; };
+		76BE4490240F3268004430B7 /* MultiReceiptModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiReceiptModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -227,6 +229,7 @@
 			isa = PBXGroup;
 			children = (
 				76BE448C240F2FF0004430B7 /* ReceiptModel.swift */,
+				76BE4490240F3268004430B7 /* MultiReceiptModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -318,6 +321,7 @@
 				76BE4463240CC20E004430B7 /* DataAccess.swift in Sources */,
 				76BE44422406732E004430B7 /* AppDelegate.swift in Sources */,
 				76BE446A240CFFD8004430B7 /* LoginViewModel.swift in Sources */,
+				76BE4491240F3268004430B7 /* MultiReceiptModel.swift in Sources */,
 				76BE4489240E5FC6004430B7 /* MultiReceiptCell.swift in Sources */,
 				76BE4477240E4DE7004430B7 /* Type.swift in Sources */,
 				76BE4487240E5FA1004430B7 /* ReceiptCell.swift in Sources */,
