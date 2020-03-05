@@ -24,5 +24,18 @@ class LoginViewController: UIViewController {
             print("=====SUCCESS=====")
         }
     }
-
+    
+    //MARK: - action -
+    @IBAction func showReceiptScreen(_ sender: UIButton) {
+        let receiptSb = UIStoryboard(name: "Receipt", bundle: nil)
+        let vc = receiptSb.instantiateViewController(withIdentifier: "ReceiptViewController") as! ReceiptViewController
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    @IBAction func showMultiReceiptScreen(_ sender: UIButton) {
+        let multiReceiptSb = UIStoryboard(name: "MultiReceipt", bundle: nil)
+        let vc = multiReceiptSb.instantiateViewController(withIdentifier: "MultiReceiptViewController") as! MultiReceiptViewController
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
 }

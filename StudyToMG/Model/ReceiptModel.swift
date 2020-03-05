@@ -30,13 +30,13 @@ struct SCMS_METC_R006 {
             let TRSC_TM     : String // 거래시간
             let TRSC_WEEK   : String // 거래요일
             let TX_AMT      : String // 거래금액
-            let USE_USAG_CD : String // 용도코드
-            let USE_USAG_NM : String // 사용용도
+//            let USE_USAG_CD : String // 용도코드
+//            let USE_USAG_NM : String // 사용용도
             let BZAQ_NM     : String // 사용처명
             let APPR_CONT   : String // 내용
             let TX_SEQ      : String // 제출거래번호
             let USER_NM     : String // 사용자명
-            let UPD_ABLE_YN : String // 수정가능여부
+//            let UPD_ABLE_YN : String // 수정가능여부
             let BIZ_NO      : String // 사업자번호
             let SPLY_AMT    : String // 공급가액
             let ITEM_TAX    : String // 부가세액

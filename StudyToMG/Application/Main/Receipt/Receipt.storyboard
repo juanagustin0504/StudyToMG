@@ -8,18 +8,30 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Receipt View Controller-->
         <scene sceneID="XPf-GU-s75">
             <objects>
-                <viewController id="11P-FV-45f" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ReceiptViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="11P-FV-45f" customClass="ReceiptViewController" customModule="StudyToMG" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="A0f-Ia-9fG">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3uA-CH-HgG">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="56"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hIg-3Q-dpv">
+                                        <rect key="frame" x="20" y="22.5" width="19.5" height="11"/>
+                                        <state key="normal" backgroundImage="arrow.left" catalog="system"/>
+                                        <connections>
+                                            <action selector="backToMain:" destination="11P-FV-45f" eventType="touchUpInside" id="uvF-Ya-0DG"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
+                                    <constraint firstItem="hIg-3Q-dpv" firstAttribute="leading" secondItem="3uA-CH-HgG" secondAttribute="leading" constant="20" symbolic="YES" id="bai-BJ-9ho"/>
+                                    <constraint firstItem="hIg-3Q-dpv" firstAttribute="top" secondItem="3uA-CH-HgG" secondAttribute="top" constant="20" symbolic="YES" id="kCL-df-8dX"/>
+                                    <constraint firstAttribute="bottom" secondItem="hIg-3Q-dpv" secondAttribute="bottom" constant="20" symbolic="YES" id="msi-mD-mPx"/>
                                     <constraint firstAttribute="height" constant="56" id="qOE-aw-qLV"/>
                                 </constraints>
                             </view>
@@ -59,4 +71,7 @@
             <point key="canvasLocation" x="138.40000000000001" y="80.50974512743629"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="arrow.left" catalog="system" width="64" height="48"/>
+    </resources>
 </document>

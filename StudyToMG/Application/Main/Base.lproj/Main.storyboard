@@ -67,21 +67,29 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gwz-lU-UWl">
-                                <rect key="frame" x="161" y="402" width="52" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="수기증빙"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gwz-lU-UWl">
+                                <rect key="frame" x="129" y="394" width="117" height="30"/>
+                                <state key="normal" title="수기영수증목록조회"/>
+                                <connections>
+                                    <action selector="showReceiptScreen:" destination="ak4-kY-aB5" eventType="touchUpInside" id="WP9-Nx-7xK"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kbi-uX-vh5">
-                                <rect key="frame" x="162" y="440" width="52" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="수기증빙"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kbi-uX-vh5">
+                                <rect key="frame" x="129" y="444" width="117" height="30"/>
+                                <state key="normal" title="기타영수증목록조회"/>
+                                <connections>
+                                    <action selector="showMultiReceiptScreen:" destination="ak4-kY-aB5" eventType="touchUpInside" id="dhF-vk-TxF"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="gwz-lU-UWl" firstAttribute="top" secondItem="VN9-RL-fro" secondAttribute="bottom" constant="50" id="5L6-8u-H9n"/>
                             <constraint firstItem="VN9-RL-fro" firstAttribute="centerX" secondItem="Wnd-He-za3" secondAttribute="centerX" id="SFb-P3-F6a"/>
+                            <constraint firstItem="Kbi-uX-vh5" firstAttribute="centerX" secondItem="Wnd-He-za3" secondAttribute="centerX" id="UcQ-6V-LBZ"/>
+                            <constraint firstItem="Kbi-uX-vh5" firstAttribute="top" secondItem="gwz-lU-UWl" secondAttribute="bottom" constant="20" id="XF5-7h-xzd"/>
                             <constraint firstItem="VN9-RL-fro" firstAttribute="centerY" secondItem="Wnd-He-za3" secondAttribute="centerY" id="d8o-5K-NjQ"/>
+                            <constraint firstItem="gwz-lU-UWl" firstAttribute="centerX" secondItem="Wnd-He-za3" secondAttribute="centerX" id="uPx-Qb-bbn"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="G6O-eb-5zK"/>
                     </view>

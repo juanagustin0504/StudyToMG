@@ -14,4 +14,6 @@ class SharedInstance {
     private init() {}
     
     var c_site_url: String = ""
+    
+    var receiptData: SCMS_METC_R006.Response!
 }

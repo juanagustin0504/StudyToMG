@@ -42,11 +42,12 @@ struct SCMS_METC_R007 {
             let CNFM_YN     : String // 확인여부
             let FILE_LIST   : [FILE_LIST]
             
-            struct FILE_LIST: Decodable {
-                let FILE_REG_NO : String // 파일등록번호
-                let FILE_URL    : String // 파일URL
-                let THUMB_YN    : String // 썸네일여부
-            }
+        }
+        
+        struct FILE_LIST: Decodable {
+            let FILE_REG_NO : String // 파일등록번호
+            let FILE_URL    : String // 파일URL
+            let THUMB_YN    : String // 썸네일여부
         }
     }
     

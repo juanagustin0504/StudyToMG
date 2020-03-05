@@ -18,8 +18,9 @@ class ReceiptViewModel {
             switch result {
             case .failure(let error):
                 completion(error)
-            case .success(let responseObj):
-                self.responseObj = responseObj.RESP_DATA
+            case .success(let success):
+                self.responseObj = success.RESP_DATA
+                SharedInstance.shared.receiptData = self.responseObj
                 completion(nil)
             }
         }
