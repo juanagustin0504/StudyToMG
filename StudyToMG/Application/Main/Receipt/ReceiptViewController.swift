@@ -20,10 +20,17 @@ class ReceiptViewController: UIViewController {
     var pageNo: Int = 0
     var pageSz: Int = 30
     
+    var sections: [String] = [String]()
+    
+    var dict: [String:String] = [String:String]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
+        
+        tableView.delegate = self
+        tableView.dataSource = self
         
         receiptObj?.removeAll()
         receiptViewModel.request_SCMS_METC_R006(PAGE_NO: String(self.pageNo), PAGE_SZ: String(self.pageSz)) { (error) in
@@ -37,9 +44,6 @@ class ReceiptViewController: UIViewController {
             DispatchQueue.main.async {
                 self.tableView.reloadData()
             }
-            
-            print(self.curDate)
-            
         }
     }
     
@@ -54,15 +58,18 @@ class ReceiptViewController: UIViewController {
 extension ReceiptViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if indexPath.row == 0 {
-            
-        }
+        print("didSelectRowAt indexPath : \(indexPath.row)")
     }
     
 }
 
 //MARK: - datasource -
 extension ReceiptViewController: UITableViewDataSource {
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return pageSz
     }
@@ -71,26 +78,20 @@ extension ReceiptViewController: UITableViewDataSource {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "ReceiptCell") as? ReceiptCell else {
             return UITableViewCell()
         }
-        cell.titleLb.text   = receiptObj?[indexPath.row].BZAQ_NM ?? "목포횟집"
-        cell.dateLb.text    = receiptObj?[indexPath.row].TRSC_DT ?? "5월 30일"
-        cell.amountLb.text  = receiptObj?[indexPath.row].TX_AMT ?? "-500,000"
-        cell.dayOfWeek      = receiptObj?[indexPath.row].TRSC_WEEK ?? "목"
+        cell.titleLb.text   = receiptObj?[indexPath.row].BZAQ_NM ?? ""
+        cell.dateLb.text    = receiptObj?[indexPath.row].TRSC_DT ?? ""
+        cell.amountLb.text  = receiptObj?[indexPath.row].TX_AMT ?? ""
+        cell.dayOfWeek      = receiptObj?[indexPath.row].TRSC_WEEK ?? ""
         
         return cell
     }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        var title = ""
-        if section == 0 {
-            title = "이번주"
-        } else if section == 1 {
-            
-        }
-        return title
+        return "TEST"
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 130.0
+        return 112
     }
     
 }

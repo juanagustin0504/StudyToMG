@@ -53,63 +53,65 @@
                                     <constraint firstItem="n7y-iZ-mlJ" firstAttribute="centerY" secondItem="73B-3F-wdy" secondAttribute="centerY" id="yuQ-64-Heg"/>
                                 </constraints>
                             </view>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="hJE-xB-5yx">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="hJE-xB-5yx">
                                 <rect key="frame" x="0.0" y="120" width="375" height="547"/>
                                 <color key="backgroundColor" red="0.98039215686274506" green="0.98039215686274506" blue="0.98039215686274506" alpha="1" colorSpace="calibratedRGB"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="ReceiptCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ReceiptCell" rowHeight="130" id="NB8-QV-4GC" customClass="ReceiptCell" customModule="StudyToMG" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="130"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="ReceiptCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ReceiptCell" rowHeight="112" id="NB8-QV-4GC" customClass="ReceiptCell" customModule="StudyToMG" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="112"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="NB8-QV-4GC" id="fCo-zt-NPt">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="130"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="112"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="64x-pf-GR5">
-                                                    <rect key="frame" x="20" y="20" width="335" height="90"/>
+                                                    <rect key="frame" x="20" y="10" width="335" height="92"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="원" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qeo-ZJ-avF">
-                                                            <rect key="frame" x="267.5" y="32" width="20" height="26"/>
+                                                            <rect key="frame" x="267.5" y="33" width="20" height="26"/>
                                                             <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="22"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sh0-2Q-UIA">
-                                                            <rect key="frame" x="295.5" y="36" width="19.5" height="18"/>
+                                                            <rect key="frame" x="295.5" y="37" width="19.5" height="18"/>
                                                             <color key="tintColor" red="0.12549019610000001" green="0.12549019610000001" blue="0.12549019610000001" alpha="1" colorSpace="calibratedRGB"/>
                                                             <state key="normal" backgroundImage="arrow.right" catalog="system">
                                                                 <color key="titleColor" red="0.12549019610000001" green="0.12549019610000001" blue="0.12549019610000001" alpha="1" colorSpace="calibratedRGB"/>
                                                             </state>
                                                         </button>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-500,000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TSt-GD-iC9">
-                                                            <rect key="frame" x="171" y="32" width="88.5" height="26"/>
+                                                            <rect key="frame" x="171" y="33" width="88.5" height="26"/>
                                                             <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="22"/>
                                                             <color key="textColor" red="1" green="0.40784313725490196" blue="0.29019607843137252" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5월 30일(목)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ifR-Uh-CjI">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="5월 30일(목)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ifR-Uh-CjI">
                                                             <rect key="frame" x="20" y="49" width="76" height="17.5"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
                                                             <color key="textColor" red="0.66274509803921566" green="0.67843137254901964" blue="0.70980392156862748" alpha="1" colorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="목포횟집" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ogq-wR-cnd">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="목포횟집" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ogq-wR-cnd">
                                                             <rect key="frame" x="20" y="25" width="62.5" height="22"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="18"/>
                                                             <color key="textColor" red="0.12549019607843137" green="0.12549019607843137" blue="0.12549019607843137" alpha="1" colorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Avq-XW-dZk">
+                                                            <rect key="frame" x="-4" y="-5" width="110" height="102"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        </stackView>
                                                     </subviews>
                                                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                     <constraints>
-                                                        <constraint firstItem="ifR-Uh-CjI" firstAttribute="top" secondItem="Ogq-wR-cnd" secondAttribute="bottom" constant="2" id="7Tp-lP-NwE"/>
-                                                        <constraint firstItem="Ogq-wR-cnd" firstAttribute="top" secondItem="64x-pf-GR5" secondAttribute="top" constant="25" id="IvK-YO-yBV"/>
                                                         <constraint firstItem="Qeo-ZJ-avF" firstAttribute="leading" secondItem="TSt-GD-iC9" secondAttribute="trailing" constant="8" id="JNp-GM-qHj"/>
                                                         <constraint firstItem="TSt-GD-iC9" firstAttribute="centerY" secondItem="64x-pf-GR5" secondAttribute="centerY" id="Oqa-fC-dBM"/>
-                                                        <constraint firstItem="ifR-Uh-CjI" firstAttribute="leading" secondItem="64x-pf-GR5" secondAttribute="leading" constant="20" id="Ut1-lm-RVc"/>
                                                         <constraint firstAttribute="trailing" secondItem="Sh0-2Q-UIA" secondAttribute="trailing" constant="20" id="cJ6-pR-d9P"/>
                                                         <constraint firstItem="Qeo-ZJ-avF" firstAttribute="centerY" secondItem="64x-pf-GR5" secondAttribute="centerY" id="cq7-bM-NQl"/>
                                                         <constraint firstItem="Sh0-2Q-UIA" firstAttribute="centerY" secondItem="64x-pf-GR5" secondAttribute="centerY" id="dvv-tx-0DU"/>
-                                                        <constraint firstItem="Ogq-wR-cnd" firstAttribute="leading" secondItem="64x-pf-GR5" secondAttribute="leading" constant="20" id="eGS-iB-osL"/>
                                                         <constraint firstItem="Sh0-2Q-UIA" firstAttribute="leading" secondItem="Qeo-ZJ-avF" secondAttribute="trailing" constant="8" id="tSy-aU-G8I"/>
                                                     </constraints>
                                                 </view>
@@ -117,8 +119,8 @@
                                             <constraints>
                                                 <constraint firstAttribute="trailing" secondItem="64x-pf-GR5" secondAttribute="trailing" constant="20" id="3TG-dy-KKM"/>
                                                 <constraint firstItem="64x-pf-GR5" firstAttribute="leading" secondItem="fCo-zt-NPt" secondAttribute="leading" constant="20" id="Jh8-DP-eZg"/>
-                                                <constraint firstAttribute="bottom" secondItem="64x-pf-GR5" secondAttribute="bottom" constant="20" id="fz6-01-nAT"/>
-                                                <constraint firstItem="64x-pf-GR5" firstAttribute="top" secondItem="fCo-zt-NPt" secondAttribute="top" constant="20" id="wqo-Yz-5et"/>
+                                                <constraint firstAttribute="bottom" secondItem="64x-pf-GR5" secondAttribute="bottom" constant="10" id="fz6-01-nAT"/>
+                                                <constraint firstItem="64x-pf-GR5" firstAttribute="top" secondItem="fCo-zt-NPt" secondAttribute="top" constant="10" id="wqo-Yz-5et"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.98039215686274506" green="0.98039215686274506" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -130,10 +132,6 @@
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
-                                <connections>
-                                    <outlet property="dataSource" destination="11P-FV-45f" id="PSn-PZ-nTo"/>
-                                    <outlet property="delegate" destination="11P-FV-45f" id="AdV-8C-jOf"/>
-                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" red="0.98039215686274506" green="0.98039215686274506" blue="0.98039215686274506" alpha="1" colorSpace="calibratedRGB"/>
