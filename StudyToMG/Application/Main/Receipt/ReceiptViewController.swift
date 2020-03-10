@@ -15,14 +15,10 @@ class ReceiptViewController: UIViewController {
     let receiptViewModel: ReceiptViewModel = ReceiptViewModel()
     var receiptObj : [SCMS_METC_R006.Response.REC]? = nil
     
-    var curDate: Date = Date(timeIntervalSinceNow: 0)
-    
     var pageNo: Int = 0
-    var pageSz: Int = 30
+    var pageSz: Int = 10
     
     var sections: [String] = [String]()
-    
-    var dict: [String:String] = [String:String]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,6 +28,7 @@ class ReceiptViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         
+        sections.removeAll()
         receiptObj?.removeAll()
         receiptViewModel.request_SCMS_METC_R006(PAGE_NO: String(self.pageNo), PAGE_SZ: String(self.pageSz)) { (error) in
             if error != nil {
@@ -40,6 +37,11 @@ class ReceiptViewController: UIViewController {
             }
             print(":::::SUCCESS:::::")
             self.receiptObj = self.receiptViewModel.responseObj?.REC
+            for rec in self.receiptObj! {
+                if !self.sections.contains(rec.INQ_GRP) {
+                    self.sections.append(rec.INQ_GRP)
+                }
+            }
             
             DispatchQueue.main.async {
                 self.tableView.reloadData()
@@ -67,11 +69,18 @@ extension ReceiptViewController: UITableViewDelegate {
 extension ReceiptViewController: UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
+        return sections.count
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return pageSz
+        var count : Int = 0
+        for index in 0 ..< self.receiptObj!.count {
+            if self.receiptObj![index].INQ_GRP == sections[section] {
+                count -= -1
+            }
+        }
+        
+        return count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -87,7 +96,18 @@ extension ReceiptViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return "TEST"
+        if sections[section] == "0000" {
+            return "이번주"
+        }
+        let start = sections[section].index(sections[section].startIndex, offsetBy: 0) ..< sections[section].index(sections[section].endIndex, offsetBy: -2) // 20
+        let end   = sections[section].index(sections[section].startIndex, offsetBy: 2) ..< sections[section].index(sections[section].endIndex, offsetBy: 0) // 03
+        
+        let result =  (sections[section])[start] + "년" + (sections[section])[end] + "월"
+        let resultStr = String(result)
+        print(result)
+        print(resultStr)
+        
+        return resultStr
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
