@@ -15,13 +15,13 @@ class ReceiptCell: UITableViewCell {
     @IBOutlet weak var dateLb: UILabel!
     @IBOutlet weak var amountLb: UILabel!
     
-    var dayOfWeek: String = String()
+    var dayOfWeek: String? = nil
 
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
         myViewStyle()
-        dateLb.text = dateLb.text! + "(\(dayOfWeek))"
+        dateLb.text = dateLb.text! + "(\(dayOfWeek ?? ""))"
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
