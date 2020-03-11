@@ -99,10 +99,18 @@ extension ReceiptViewController: UITableViewDataSource {
             return UITableViewCell()
         }
         let data = self.receiptDataResult![indexPath.section].value[indexPath.row]
+        guard data.TRSC_DT != "", data.TRSC_WEEK != "" else {
+            cell.dateLb.text = ""
+            return cell
+        }
+        let month = data.TRSC_DT!.index(data.TRSC_DT!.startIndex, offsetBy: 4) ..< data.TRSC_DT!.index(data.TRSC_DT!.startIndex, offsetBy: 6)
+        let day   = data.TRSC_DT!.index(data.TRSC_DT!.startIndex, offsetBy: 6) ..< data.TRSC_DT!.index(data.TRSC_DT!.startIndex, offsetBy: 8)
+        let monthInt = Int(data.TRSC_DT![month])!
+        let dayInt   = Int(data.TRSC_DT![day])!
+        let dateDataResult = String(monthInt) + "월 " + String(dayInt) + "일(\(data.TRSC_WEEK!))"
         cell.titleLb.text   = data.BZAQ_NM
-        cell.dateLb.text    = data.TRSC_DT
+        cell.dateLb.text    = dateDataResult
         cell.amountLb.text  = data.TX_AMT
-        cell.dayOfWeek      = data.TRSC_WEEK
         
         return cell
     }
@@ -119,8 +127,8 @@ extension ReceiptViewController: UITableViewDataSource {
         
         let result =  section[start] + "년" + section[end] + "월"
         let resultStr = String(result)
-        print(result)
-        print(resultStr)
+//        print(result)
+//        print(resultStr)
         
         return resultStr
     }

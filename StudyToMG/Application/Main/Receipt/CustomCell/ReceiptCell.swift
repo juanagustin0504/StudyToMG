@@ -21,7 +21,7 @@ class ReceiptCell: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
         myViewStyle()
-        dateLb.text = dateLb.text! + "(\(dayOfWeek ?? ""))"
+        
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
