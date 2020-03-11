@@ -16,18 +16,31 @@ class ReceiptCell: UITableViewCell {
     @IBOutlet weak var amountLb: UILabel!
     
     var dayOfWeek: String? = nil
+    
+    func shrink(down: Bool) {
+        UIView.animate(withDuration: 0.3, animations: {
+            if down {
+                self.myView.transform = CGAffineTransform(scaleX: 0.95, y: 0.95)
+            }
+        }) { (_) in
+            UIView.animate(withDuration: 0.3) {
+                self.myView.transform = .identity
+            }
+        }
+    }
 
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
         myViewStyle()
-        
+        self.selectionStyle = .none
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+        shrink(down: isSelected)
     }
     
     func myViewStyle() {

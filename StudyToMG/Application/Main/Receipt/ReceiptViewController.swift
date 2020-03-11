@@ -67,6 +67,8 @@ class ReceiptViewController: UIViewController {
         
     }
     
+    
+    
     //MARK: - action -
     @IBAction func backToMain(_ sender: UIButton) {
         self.navigationController?.popViewController(animated: true)
@@ -107,7 +109,7 @@ extension ReceiptViewController: UITableViewDataSource {
         let day   = data.TRSC_DT!.index(data.TRSC_DT!.startIndex, offsetBy: 6) ..< data.TRSC_DT!.index(data.TRSC_DT!.startIndex, offsetBy: 8)
         let monthInt = Int(data.TRSC_DT![month])!
         let dayInt   = Int(data.TRSC_DT![day])!
-        let dateDataResult = String(monthInt) + "월 " + String(dayInt) + "일(\(data.TRSC_WEEK!))"
+        let dateDataResult = String(monthInt) + "월 " + String(dayInt) + "일"
         cell.titleLb.text   = data.BZAQ_NM
         cell.dateLb.text    = dateDataResult
         cell.amountLb.text  = data.TX_AMT
