@@ -67,6 +67,19 @@ class ReceiptViewController: UIViewController {
         
     }
     
+    func calcDate(section: Int, row: Int) -> String {
+        let data = self.receiptDataResult![section].value[row]
+        guard data.TRSC_DT != "", data.TRSC_WEEK != "" else {
+            return ""
+        }
+        let month = data.TRSC_DT!.index(data.TRSC_DT!.startIndex, offsetBy: 4) ..< data.TRSC_DT!.index(data.TRSC_DT!.startIndex, offsetBy: 6)
+        let day   = data.TRSC_DT!.index(data.TRSC_DT!.startIndex, offsetBy: 6) ..< data.TRSC_DT!.index(data.TRSC_DT!.startIndex, offsetBy: 8)
+        let monthInt = Int(data.TRSC_DT![month])!
+        let dayInt   = Int(data.TRSC_DT![day])!
+        let dateDataResult = String(monthInt) + "월 " + String(dayInt) + "일"
+        return dateDataResult
+    }
+    
     
     
     //MARK: - action -
@@ -97,24 +110,30 @@ extension ReceiptViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "ReceiptCell") as? ReceiptCell else {
-            return UITableViewCell()
-        }
         let data = self.receiptDataResult![indexPath.section].value[indexPath.row]
-        guard data.TRSC_DT != "", data.TRSC_WEEK != "" else {
-            cell.dateLb.text = ""
+        if data.RCPT_TYPE == "R" {
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: "ReceiptCell") as? ReceiptCell else {
+                return UITableViewCell()
+            }
+            
+            cell.titleLb.text   = data.BZAQ_NM
+            cell.dateLb.text    = calcDate(section: indexPath.section, row: indexPath.row)
+            cell.amountLb.text  = data.TX_AMT
+            
+            return cell
+        } else if data.RCPT_TYPE == "P" {
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: "PhotoReceiptCell") as? PhotoReceiptCell else {
+                return UITableViewCell()
+            }
+            
+            cell.titleLb.text   = data.BZAQ_NM
+            cell.dateLb.text    = calcDate(section: indexPath.section, row: indexPath.row)
+            cell.imageURL       = data.FILE_URL!
+            
             return cell
         }
-        let month = data.TRSC_DT!.index(data.TRSC_DT!.startIndex, offsetBy: 4) ..< data.TRSC_DT!.index(data.TRSC_DT!.startIndex, offsetBy: 6)
-        let day   = data.TRSC_DT!.index(data.TRSC_DT!.startIndex, offsetBy: 6) ..< data.TRSC_DT!.index(data.TRSC_DT!.startIndex, offsetBy: 8)
-        let monthInt = Int(data.TRSC_DT![month])!
-        let dayInt   = Int(data.TRSC_DT![day])!
-        let dateDataResult = String(monthInt) + "월 " + String(dayInt) + "일"
-        cell.titleLb.text   = data.BZAQ_NM
-        cell.dateLb.text    = dateDataResult
-        cell.amountLb.text  = data.TX_AMT
         
-        return cell
+        return UITableViewCell()
     }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
@@ -124,8 +143,6 @@ extension ReceiptViewController: UITableViewDataSource {
         }
         let start = section.index(section.startIndex, offsetBy: 0) ..< section.index(section.endIndex, offsetBy: -2)
         let end   = section.index(section.startIndex, offsetBy: 2) ..< section.index(section.endIndex, offsetBy: 0)
-//        let start = sections[section].index(sections[section].startIndex, offsetBy: 0) ..< sections[section].index(sections[section].endIndex, offsetBy: -2) // 20
-//        let end   = sections[section].index(sections[section].startIndex, offsetBy: 2) ..< sections[section].index(sections[section].endIndex, offsetBy: 0) // 03
         
         let result =  section[start] + "년" + section[end] + "월"
         let resultStr = String(result)
@@ -136,7 +153,10 @@ extension ReceiptViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 112
+        let data = self.receiptDataResult![indexPath.section].value[indexPath.row]
+        if data.RCPT_TYPE == "R" { return 80 }
+        else if data.RCPT_TYPE == "P" { return 180 }
+        else { return 0 }
     }
     
 }
