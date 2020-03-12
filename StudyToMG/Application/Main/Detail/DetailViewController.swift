@@ -13,13 +13,25 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var imageView: UIImageView! // 사진
     @IBOutlet weak var REG_DTM: UILabel! { // 등록일시
         didSet {
-            self.REG_DTM.text = self.regDtm
+            let year = self.regDtm!.index(self.regDtm!.startIndex, offsetBy: 0) ..< self.regDtm!.index(self.regDtm!.startIndex, offsetBy: 4)
+            let month = self.regDtm!.index(self.regDtm!.startIndex, offsetBy: 4) ..< self.regDtm!.index(self.regDtm!.startIndex, offsetBy: 6)
+            let day = self.regDtm!.index(self.regDtm!.startIndex, offsetBy: 6) ..< self.regDtm!.index(self.regDtm!.startIndex, offsetBy: 8)
+            let resultString = String(self.regDtm![year]) + "년 " + String(self.regDtm![month]) + "월 " + String(self.regDtm![day]) + "일"
+            self.REG_DTM.text = resultString
         }
     }
     @IBOutlet weak var TRSC_DT: UILabel! { // 사용일자
         didSet {
-            if self.trscDt == "" { self.trscDt = "-"}
-            self.TRSC_DT.text = self.trscDt
+            var resultString = ""
+            if self.trscDt == "" {
+                resultString = "-"
+            } else {
+                let year = self.trscDt!.index(self.trscDt!.startIndex, offsetBy: 0) ..< self.trscDt!.index(self.trscDt!.startIndex, offsetBy: 4)
+                let month = self.trscDt!.index(self.trscDt!.startIndex, offsetBy: 4) ..< self.trscDt!.index(self.trscDt!.startIndex, offsetBy: 6)
+                let day = self.trscDt!.index(self.trscDt!.startIndex, offsetBy: 6) ..< self.trscDt!.index(self.trscDt!.startIndex, offsetBy: 8)
+                resultString = String(self.trscDt![year]) + "년 " + String(self.trscDt![month]) + "월 " + String(self.trscDt![day]) + "일"
+            }
+            self.TRSC_DT.text = resultString
         }
     }
     @IBOutlet weak var BZAQ_NM: UILabel! { // 증빙제목
@@ -30,8 +42,18 @@ class DetailViewController: UIViewController {
     }
     @IBOutlet weak var TX_AMT: UILabel!  { // 사용금액
         didSet {
-            if self.txAmt == "" { self.txAmt = "-"}
-            self.TX_AMT.text = self.txAmt
+            var resultString = ""
+            if self.txAmt == "" {
+                resultString = "-"
+            } else {
+                let txAmtInt = (txAmt! as NSString).integerValue
+                let value: NSNumber = txAmtInt as NSNumber
+                let formatter = NumberFormatter()
+                formatter.numberStyle = .decimal
+                guard let resultValue = formatter.string(from: value) else { return }
+                resultString = resultValue
+            }
+            self.TX_AMT.text = resultString + "원"
         }
     }
     @IBOutlet weak var PAY_TYPE_CD_1: UIButton! // 지급분류_현금
