@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		76996536241A0D4D00EFEFA6 /* Detail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76996535241A0D4D00EFEFA6 /* Detail.storyboard */; };
+		76996538241A120C00EFEFA6 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76996537241A120C00EFEFA6 /* DetailViewController.swift */; };
 		76BE44422406732E004430B7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76BE44412406732E004430B7 /* AppDelegate.swift */; };
 		76BE44442406732E004430B7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76BE44432406732E004430B7 /* SceneDelegate.swift */; };
 		76BE44492406732E004430B7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76BE44472406732E004430B7 /* Main.storyboard */; };
@@ -35,6 +37,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		76996535241A0D4D00EFEFA6 /* Detail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Detail.storyboard; sourceTree = "<group>"; };
+		76996537241A120C00EFEFA6 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		76BE443E2406732E004430B7 /* StudyToMG.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StudyToMG.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		76BE44412406732E004430B7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		76BE44432406732E004430B7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -75,6 +79,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		76996534241A0B5500EFEFA6 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				76996535241A0D4D00EFEFA6 /* Detail.storyboard */,
+				76996537241A120C00EFEFA6 /* DetailViewController.swift */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
 		76BE44352406732E004430B7 = {
 			isa = PBXGroup;
 			children = (
@@ -149,6 +162,7 @@
 				76BE4466240CFAE5004430B7 /* Login */,
 				76BE4478240E579A004430B7 /* Receipt */,
 				76BE4479240E5993004430B7 /* MultiReceipt */,
+				76996534241A0B5500EFEFA6 /* Detail */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -307,6 +321,7 @@
 				76BE444B24067330004430B7 /* Assets.xcassets in Resources */,
 				76BE44492406732E004430B7 /* Main.storyboard in Resources */,
 				76BE447D240E59C1004430B7 /* MultiReceipt.storyboard in Resources */,
+				76996536241A0D4D00EFEFA6 /* Detail.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -323,6 +338,7 @@
 				76BE4475240E4A38004430B7 /* SharedInstance.swift in Sources */,
 				76BE4463240CC20E004430B7 /* DataAccess.swift in Sources */,
 				76BE44422406732E004430B7 /* AppDelegate.swift in Sources */,
+				76996538241A120C00EFEFA6 /* DetailViewController.swift in Sources */,
 				76BE446A240CFFD8004430B7 /* LoginViewModel.swift in Sources */,
 				76BE4491240F3268004430B7 /* MultiReceiptModel.swift in Sources */,
 				76BE4489240E5FC6004430B7 /* MultiReceiptCell.swift in Sources */,
