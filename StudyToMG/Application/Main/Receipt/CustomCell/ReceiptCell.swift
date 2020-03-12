@@ -39,21 +39,32 @@ class PhotoReceiptCell : UITableViewCell {
     @IBOutlet weak var myView: UIView!
     @IBOutlet weak var titleLb: UILabel!
     @IBOutlet weak var dateLb: UILabel!
-    @IBOutlet weak var myImageView: UIImageView! {
-        didSet {
-            let image = downloadImage(from: URL(string: imageURL))
-            myImageView.image = image
-        }
-    }
+    @IBOutlet weak var myImageView: UIImageView!
     
     var imageURL: String = ""
+    var receiptImage: UIImage? = nil
     
     override func awakeFromNib() {
         super.awakeFromNib()
         
         myViewStyle(myView)
+        DispatchQueue.main.async {
+            DataAccess.shared.getData(from: URL(string: self.imageURL)!, completion: { (data, response, error) in
+                if error != nil {
+                    print(error! as NSError)
+                    return
+                }
+                guard let data = data else {
+                    return
+                }
+                DispatchQueue.main.async {
+                    self.myImageView.image = UIImage(data: data)
+                }
+                
+            })
+        }
+        
         self.selectionStyle = .none
-//        receiptImage = downloadImage(from: URL(string: imageURL)!)
         
     }
     
@@ -86,20 +97,5 @@ extension UITableViewCell {
         myView.layer.cornerRadius = 16 // 코너 둥글게
         myView.layer.borderColor = UIColor.black.cgColor // 테두리 색
         myView.layer.borderWidth = 1.0 // 테두리 굵기
-    }
-    
-    func downloadImage(from url: URL?) -> UIImage? {
-        guard let url = url else {
-            return UIImage()
-        }
-        print("Download Started")
-        var image: UIImage? = nil
-        DataAccess.shared.getData(from: url) { (data, response, error) in
-            guard let data = data, error == nil else { return }
-            print(response?.suggestedFilename ?? url.lastPathComponent)
-            print("Download Finished")
-            image = UIImage(data: data)
-        }
-        return image
     }
 }

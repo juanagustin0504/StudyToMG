@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 class DataAccess {
     private static var sharedInstance = DataAccess()
@@ -110,6 +111,31 @@ class DataAccess {
                 completion(.failure(error as NSError))
             }
         }.resume()
+    }
+    
+    func downloadImage(url: URL?) -> UIImage? {
+        var image: UIImage? = nil
+        guard let URL = url else {
+            return UIImage()
+        }
+        
+        let session = URLSession(configuration: .default)
+        var request = URLRequest(url: URL)
+        request.httpMethod = "GET"
+        
+        session.dataTask(with: URL) { (data, response, error) in
+            if error != nil {
+                print("ERROR:::::\(error! as NSError)")
+                return
+            }
+            
+            guard let data = data else {
+                return
+            }
+            
+            image = UIImage(data: data)
+        }.resume()
+        return image
     }
     
     func getData(from url: URL, completion: @escaping (Data?, URLResponse?, Error?) -> ()) {
