@@ -93,7 +93,18 @@ class ReceiptViewController: UIViewController {
 extension ReceiptViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let data = self.receiptDataResult![indexPath.section].value[indexPath.row]
         print("didSelectRowAt indexPath : \(indexPath.row)")
+        let detailSb = UIStoryboard(name: "Detail", bundle: nil)
+        let vc = detailSb.instantiateViewController(withIdentifier: "DetailViewController") as! DetailViewController
+        vc.imageURL     = data.FILE_URL
+        vc.regDtm       = data.REG_DTM
+        vc.trscDt       = data.TRSC_DT
+        vc.bzaqNm       = data.BZAQ_NM
+        vc.txAmt        = data.TX_AMT
+        vc.payTypeCode  = data.PAY_TYPE_CD
+        vc.apprCont     = data.APPR_CONT
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
 }
