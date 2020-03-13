@@ -10,6 +10,7 @@ import UIKit
 
 class DetailViewController: UIViewController {
     
+    @IBOutlet weak var myView: UIView!
     @IBOutlet weak var imageView: UIImageView! // 사진
     @IBOutlet weak var REG_DTM: UILabel! { // 등록일시
         didSet {
@@ -18,6 +19,15 @@ class DetailViewController: UIViewController {
             let day = self.regDtm!.index(self.regDtm!.startIndex, offsetBy: 6) ..< self.regDtm!.index(self.regDtm!.startIndex, offsetBy: 8)
             let resultString = String(self.regDtm![year]) + "년 " + String(self.regDtm![month]) + "월 " + String(self.regDtm![day]) + "일"
             self.REG_DTM.text = resultString
+        }
+    }
+    @IBOutlet weak var photoText: UILabel! { // *사진
+        didSet {
+            let attriburedString = NSMutableAttributedString(string: "")
+            let asterix = NSAttributedString(string: "*", attributes: [.foregroundColor: UIColor.red.cgColor])
+            attriburedString.append(asterix)
+            attriburedString.append(NSMutableAttributedString(string: "사진"))
+            self.photoText.attributedText = attriburedString
         }
     }
     @IBOutlet weak var TRSC_DT: UILabel! { // 사용일자
@@ -56,12 +66,12 @@ class DetailViewController: UIViewController {
             self.TX_AMT.text = resultString + "원"
         }
     }
-    @IBOutlet weak var PAY_TYPE_CD_1: UIButton! // 지급분류_현금
-    @IBOutlet weak var PAY_TYPE_CD_2: UIButton! // 지급분류_계좌
-    @IBOutlet weak var PAY_TYPE_CD_9: UIButton! // 지급분류_기타
-    @IBOutlet weak var APPR_CONT: UILabel! { // 내용
+    @IBOutlet weak var PAY_TYPE_CD_1: UIImageView! // 지급분류_현금
+    @IBOutlet weak var PAY_TYPE_CD_2: UIImageView! // 지급분류_계좌
+    @IBOutlet weak var PAY_TYPE_CD_9: UIImageView! // 지급분류_기타
+    @IBOutlet weak var APPR_CONT: UITextView! { // 내용
         didSet {
-            if self.apprCont == "" { self.apprCont = "-"}
+            if self.apprCont == "" { self.apprCont = "-" }
             self.APPR_CONT.text = self.apprCont
         }
     }
@@ -73,6 +83,8 @@ class DetailViewController: UIViewController {
     var txAmt       : String? = ""
     var payTypeCode : String? = ""
     var apprCont    : String? = ""
+    
+    var checkImg: [UIImage?] = [ UIImage(named: "ico-info-middle-d-check.png"), UIImage(named: "ico-info-check.png")]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -94,6 +106,8 @@ class DetailViewController: UIViewController {
             })
         }
         changeButtonFromPayTypeCode(payTypeCode ?? "1")
+        myViewStyle(imageView)
+        myViewStyle(myView)
     }
     
     @IBAction func cancelBtnTapped(_ sender: UIButton) {
@@ -106,24 +120,24 @@ class DetailViewController: UIViewController {
     
     func myViewStyle(_ myView: UIView) {
         myView.layer.masksToBounds = true // 지정된 크기를 넘어가는 이미지 자르기
-        myView.layer.cornerRadius = 16 // 코너 둥글게
-        myView.layer.borderColor = UIColor.black.cgColor // 테두리 색
+        myView.layer.cornerRadius = 10 // 코너 둥글게
+        myView.layer.borderColor = UIColor.lightGray.cgColor // 테두리 색
         myView.layer.borderWidth = 1.0 // 테두리 굵기
     }
     
     func changeButtonFromPayTypeCode(_ PAY_TYPE_CD: String) {
         if PAY_TYPE_CD == "1" {
-            self.PAY_TYPE_CD_1.imageView?.image = UIImage(named: "checkmark.circle.fill")
-            self.PAY_TYPE_CD_2.imageView?.image = UIImage(named: "checkmark.circle")
-            self.PAY_TYPE_CD_9.imageView?.image = UIImage(named: "checkmark.circle")
+            self.PAY_TYPE_CD_1.image = checkImg[1]
+            self.PAY_TYPE_CD_2.image = checkImg[0]
+            self.PAY_TYPE_CD_9.image = checkImg[0]
         } else if PAY_TYPE_CD == "2" {
-            self.PAY_TYPE_CD_1.imageView?.image = UIImage(named: "checkmark.circle")
-            self.PAY_TYPE_CD_2.imageView?.image = UIImage(named: "checkmark.circle.fill")
-            self.PAY_TYPE_CD_9.imageView?.image = UIImage(named: "checkmark.circle")
+            self.PAY_TYPE_CD_1.image = checkImg[0]
+            self.PAY_TYPE_CD_2.image = checkImg[1]
+            self.PAY_TYPE_CD_9.image = checkImg[0]
         } else if PAY_TYPE_CD == "9" {
-            self.PAY_TYPE_CD_1.imageView?.image = UIImage(named: "checkmark.circle")
-            self.PAY_TYPE_CD_2.imageView?.image = UIImage(named: "checkmark.circle")
-            self.PAY_TYPE_CD_9.imageView?.image = UIImage(named: "checkmark.circle.fill")
+            self.PAY_TYPE_CD_1.image = checkImg[0]
+            self.PAY_TYPE_CD_2.image = checkImg[0]
+            self.PAY_TYPE_CD_9.image = checkImg[1]
         }
         
     }
