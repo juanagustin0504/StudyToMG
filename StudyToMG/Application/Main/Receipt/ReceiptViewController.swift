@@ -165,7 +165,7 @@ extension ReceiptViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         let data = self.receiptDataResult![indexPath.section].value[indexPath.row]
-        if data.RCPT_TYPE == "R" { return 80 }
+        if data.RCPT_TYPE == "R" { return 100 }
         else if data.RCPT_TYPE == "P" { return 180 }
         else { return 0 }
     }

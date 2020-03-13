@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		760A26CC241B6E3A0064F766 /* FillOutReceipt.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 760A26CB241B6E3A0064F766 /* FillOutReceipt.storyboard */; };
+		760A26CE241B6E4C0064F766 /* FillOutReceiptViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 760A26CD241B6E4C0064F766 /* FillOutReceiptViewController.swift */; };
 		76996536241A0D4D00EFEFA6 /* Detail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76996535241A0D4D00EFEFA6 /* Detail.storyboard */; };
 		76996538241A120C00EFEFA6 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76996537241A120C00EFEFA6 /* DetailViewController.swift */; };
 		76BE44422406732E004430B7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76BE44412406732E004430B7 /* AppDelegate.swift */; };
@@ -37,6 +39,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		760A26CB241B6E3A0064F766 /* FillOutReceipt.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FillOutReceipt.storyboard; sourceTree = "<group>"; };
+		760A26CD241B6E4C0064F766 /* FillOutReceiptViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FillOutReceiptViewController.swift; sourceTree = "<group>"; };
 		76996535241A0D4D00EFEFA6 /* Detail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Detail.storyboard; sourceTree = "<group>"; };
 		76996537241A120C00EFEFA6 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		76BE443E2406732E004430B7 /* StudyToMG.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StudyToMG.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -79,6 +83,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		760A26CA241B6E090064F766 /* FillOutReceipt */ = {
+			isa = PBXGroup;
+			children = (
+				760A26CB241B6E3A0064F766 /* FillOutReceipt.storyboard */,
+				760A26CD241B6E4C0064F766 /* FillOutReceiptViewController.swift */,
+			);
+			path = FillOutReceipt;
+			sourceTree = "<group>";
+		};
 		76996534241A0B5500EFEFA6 /* Detail */ = {
 			isa = PBXGroup;
 			children = (
@@ -163,6 +176,7 @@
 				76BE4478240E579A004430B7 /* Receipt */,
 				76BE4479240E5993004430B7 /* MultiReceipt */,
 				76996534241A0B5500EFEFA6 /* Detail */,
+				760A26CA241B6E090064F766 /* FillOutReceipt */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -317,6 +331,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				76BE444E24067330004430B7 /* LaunchScreen.storyboard in Resources */,
+				760A26CC241B6E3A0064F766 /* FillOutReceipt.storyboard in Resources */,
 				76BE447B240E59B5004430B7 /* Receipt.storyboard in Resources */,
 				76BE444B24067330004430B7 /* Assets.xcassets in Resources */,
 				76BE44492406732E004430B7 /* Main.storyboard in Resources */,
@@ -351,6 +366,7 @@
 				76BE4481240E5D2A004430B7 /* MultiReceiptViewController.swift in Sources */,
 				76BE448D240F2FF0004430B7 /* ReceiptModel.swift in Sources */,
 				76BE447F240E5D1E004430B7 /* ReceiptViewController.swift in Sources */,
+				760A26CE241B6E4C0064F766 /* FillOutReceiptViewController.swift in Sources */,
 				76BE44442406732E004430B7 /* SceneDelegate.swift in Sources */,
 				76BE445E24067653004430B7 /* MGModel.swift in Sources */,
 			);
