@@ -16,7 +16,7 @@ class ReceiptViewController: UIViewController {
     var receiptObj : [SCMS_METC_R006.Response.REC]? = nil
     var receiptDataResult : [(key: String, value: [SCMS_METC_R006.Response.REC])]? = nil
     var pageNo: Int = 0
-    var pageSz: Int = 100
+    var pageSz: Int = 50
     
     var sections: [String] = [String]()
 
@@ -37,6 +37,7 @@ class ReceiptViewController: UIViewController {
             if error != nil {
                 print(":::::ERROR:::::")
                 print(error!)
+                return
             }
             print(":::::SUCCESS:::::")
             self.receiptObj = self.receiptViewModel.responseObj?.REC
@@ -48,8 +49,11 @@ class ReceiptViewController: UIViewController {
             
             var sortedDic = dictionary.sorted { $0.0! > $1.0! }
             
-            let startGroupElement = sortedDic.popLast()
-            sortedDic.insert(startGroupElement!, at: 0)
+            if sortedDic[0].key == "0000" {
+                let startGroupElement = sortedDic.popLast()
+                sortedDic.insert(startGroupElement!, at: 0)
+            }
+            
             self.receiptDataResult = sortedDic as? [(key: String, value: [SCMS_METC_R006.Response.REC])]
             print("===================> sorted Array \(String(describing: self.receiptDataResult))")
             print("===================> sorted Array Count \(self.receiptDataResult!.count)")

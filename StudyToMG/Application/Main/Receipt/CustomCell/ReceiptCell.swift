@@ -92,10 +92,10 @@ extension UITableViewCell {
         }
     }
     
-    func myViewStyle(_ myView: UIView) {
+    func myViewStyle(_ myView: UIView, color: UIColor = .black) {
         myView.layer.masksToBounds = true // 지정된 크기를 넘어가는 이미지 자르기
         myView.layer.cornerRadius = 10 // 코너 둥글게
-        myView.layer.borderColor = UIColor.black.cgColor // 테두리 색
+        myView.layer.borderColor = color.cgColor // 테두리 색
         myView.layer.borderWidth = 1.0 // 테두리 굵기
     }
 }

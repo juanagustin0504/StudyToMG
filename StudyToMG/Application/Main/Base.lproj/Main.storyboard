@@ -75,10 +75,10 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kbi-uX-vh5">
-                                <rect key="frame" x="129" y="444" width="117" height="30"/>
-                                <state key="normal" title="기타영수증목록조회"/>
+                                <rect key="frame" x="146.5" y="444" width="82" height="30"/>
+                                <state key="normal" title="수기증빙 작성"/>
                                 <connections>
-                                    <action selector="showMultiReceiptScreen:" destination="ak4-kY-aB5" eventType="touchUpInside" id="dhF-vk-TxF"/>
+                                    <action selector="showFillOutReceiptScreen:" destination="ak4-kY-aB5" eventType="touchUpInside" id="fZ9-wu-57X"/>
                                 </connections>
                             </button>
                         </subviews>

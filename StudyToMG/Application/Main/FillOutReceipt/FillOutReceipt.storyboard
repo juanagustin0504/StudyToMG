@@ -40,7 +40,7 @@
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <connections>
-                                                    <action selector="cancelBtnTapped:" destination="tFT-Lu-gR1" eventType="touchUpInside" id="v7M-w5-7uV"/>
+                                                    <action selector="cancelBtnTapped:" destination="tFT-Lu-gR1" eventType="touchUpInside" id="gbg-gX-rl3"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9QR-Qy-I6q">
@@ -49,7 +49,7 @@
                                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="확인"/>
                                                 <connections>
-                                                    <action selector="okBtnTapped:" destination="tFT-Lu-gR1" eventType="touchUpInside" id="KTq-15-yLe"/>
+                                                    <action selector="okBtnTapped:" destination="tFT-Lu-gR1" eventType="touchUpInside" id="7jP-xV-Rjc"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -189,7 +189,7 @@
                                             </constraints>
                                         </view>
                                         <prototypes>
-                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="PhotoCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PhotoCell" rowHeight="200" id="T8g-0O-4ji" customClass="PhotoCell" customModule="StudyToMG" customModuleProvider="target">
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="PhotoCell" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="PhotoCell" rowHeight="200" id="T8g-0O-4ji" customClass="PhotoCell" customModule="StudyToMG" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="28" width="375" height="200"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="T8g-0O-4ji" id="oxF-rx-d6G">
@@ -197,7 +197,10 @@
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="사진" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IQl-kw-JaZ">
-                                                            <rect key="frame" x="23" y="11" width="32.5" height="20.5"/>
+                                                            <rect key="frame" x="23" y="11" width="29.5" height="20.5"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="29.5" id="5QW-ov-Yd5"/>
+                                                            </constraints>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
@@ -205,20 +208,36 @@
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic-camera" translatesAutoresizingMaskIntoConstraints="NO" id="wCq-Z5-yL0">
                                                             <rect key="frame" x="115" y="11" width="245" height="174"/>
                                                             <constraints>
-                                                                <constraint firstAttribute="width" secondItem="wCq-Z5-yL0" secondAttribute="height" multiplier="31:22" id="2vB-DT-qH7"/>
+                                                                <constraint firstAttribute="width" secondItem="wCq-Z5-yL0" secondAttribute="height" multiplier="245:174" id="sSj-JW-hSf"/>
                                                             </constraints>
                                                         </imageView>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CiY-YU-rEy">
+                                                            <rect key="frame" x="324" y="23" width="24" height="24"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="24" id="Rat-Xq-Fur"/>
+                                                                <constraint firstAttribute="height" constant="24" id="lF4-Ro-64Q"/>
+                                                            </constraints>
+                                                            <state key="normal" backgroundImage="ico-del-img"/>
+                                                            <connections>
+                                                                <action selector="deletePhotoBtnTapped:" destination="tFT-Lu-gR1" eventType="touchUpInside" id="caR-hl-JdQ"/>
+                                                            </connections>
+                                                        </button>
                                                     </subviews>
                                                     <constraints>
                                                         <constraint firstItem="IQl-kw-JaZ" firstAttribute="leading" secondItem="oxF-rx-d6G" secondAttribute="leadingMargin" constant="8" id="4Rk-zs-Uba"/>
-                                                        <constraint firstItem="wCq-Z5-yL0" firstAttribute="top" secondItem="oxF-rx-d6G" secondAttribute="topMargin" id="EM7-7m-keN"/>
-                                                        <constraint firstAttribute="bottomMargin" secondItem="wCq-Z5-yL0" secondAttribute="bottom" constant="4" id="I2e-DH-yh1"/>
-                                                        <constraint firstItem="wCq-Z5-yL0" firstAttribute="leading" secondItem="IQl-kw-JaZ" secondAttribute="trailing" constant="59.5" id="Qcx-dy-YHd"/>
-                                                        <constraint firstItem="wCq-Z5-yL0" firstAttribute="trailing" secondItem="oxF-rx-d6G" secondAttribute="trailingMargin" id="drb-kD-qlK"/>
+                                                        <constraint firstAttribute="trailingMargin" secondItem="CiY-YU-rEy" secondAttribute="trailing" constant="12" id="EhJ-rg-vQP"/>
+                                                        <constraint firstItem="wCq-Z5-yL0" firstAttribute="leading" secondItem="IQl-kw-JaZ" secondAttribute="trailing" constant="62.5" id="bVp-Jq-HQX"/>
+                                                        <constraint firstItem="wCq-Z5-yL0" firstAttribute="trailing" secondItem="oxF-rx-d6G" secondAttribute="trailingMargin" id="bXf-3X-mTc"/>
+                                                        <constraint firstItem="wCq-Z5-yL0" firstAttribute="top" secondItem="oxF-rx-d6G" secondAttribute="topMargin" id="fQ0-7f-mvc"/>
+                                                        <constraint firstAttribute="bottomMargin" secondItem="wCq-Z5-yL0" secondAttribute="bottom" constant="4" id="nLk-rc-ZGY"/>
+                                                        <constraint firstItem="CiY-YU-rEy" firstAttribute="top" secondItem="oxF-rx-d6G" secondAttribute="topMargin" constant="12" id="nOp-k7-kAM"/>
                                                         <constraint firstItem="IQl-kw-JaZ" firstAttribute="top" secondItem="oxF-rx-d6G" secondAttribute="topMargin" id="qVi-eK-Ghk"/>
                                                     </constraints>
                                                 </tableViewCellContentView>
                                                 <connections>
+                                                    <outlet property="delBtn" destination="CiY-YU-rEy" id="bl6-jD-35T"/>
+                                                    <outlet property="photoLb" destination="IQl-kw-JaZ" id="kdA-Zi-v1d"/>
+                                                    <outlet property="photoView" destination="wCq-Z5-yL0" id="5wG-0l-otM"/>
                                                     <outlet property="receiptImageView" destination="wCq-Z5-yL0" id="ugM-5k-MTt"/>
                                                 </connections>
                                             </tableViewCell>
@@ -301,7 +320,7 @@
                         <viewLayoutGuide key="safeArea" id="PBM-OU-bMP"/>
                     </view>
                     <connections>
-                        <outlet property="REG_DTM" destination="bjB-i9-lPp" id="p9a-w1-N6N"/>
+                        <outlet property="REG_DTM" destination="bjB-i9-lPp" id="0P5-p5-hDI"/>
                         <outlet property="footerView" destination="USI-As-UgE" id="4wC-Yc-gQh"/>
                         <outlet property="tableView" destination="nPN-D7-N2Y" id="hvv-N0-vRw"/>
                     </connections>
@@ -310,10 +329,10 @@
             </objects>
             <point key="canvasLocation" x="138.40000000000001" y="114.69265367316342"/>
         </scene>
-        <!--Fill Out Receipt View Controller-->
+        <!--View Controller-->
         <scene sceneID="5Ie-qb-N4d">
             <objects>
-                <viewController id="Dzx-Dl-MVs" customClass="FillOutReceiptViewController" customModule="StudyToMG" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Dzx-Dl-MVs" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="yoY-13-Lc9">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
