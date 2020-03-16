@@ -116,6 +116,7 @@ extension FillOutReceiptViewController : UITableViewDataSource {
                 cell.photoView.contentMode = .scaleToFill
                 cell.delBtn.isHidden = false
             } else {
+                cell.photoView.image = UIImage(named: "ic-camera.png")
                 cell.delBtn.isHidden = true
             }
             return cell

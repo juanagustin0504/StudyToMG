@@ -81,14 +81,14 @@
                                     </label>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="nPN-D7-N2Y">
                                         <rect key="frame" x="0.0" y="84.5" width="375" height="454.5"/>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <color key="backgroundColor" red="0.98039215686274506" green="0.98039215686274506" blue="0.98039215686274506" alpha="1" colorSpace="calibratedRGB"/>
                                         <view key="tableFooterView" contentMode="scaleToFill" id="Hxc-t6-cOW">
                                             <rect key="frame" x="0.0" y="314" width="375" height="58"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="지급분류" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2WI-2e-dot">
-                                                    <rect key="frame" x="16" y="19" width="59" height="20"/>
-                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                                    <rect key="frame" x="20" y="19" width="59" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -179,10 +179,10 @@
                                                     </subviews>
                                                 </stackView>
                                             </subviews>
-                                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                            <color key="backgroundColor" red="0.98039215690000003" green="0.98039215690000003" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
                                             <constraints>
                                                 <constraint firstItem="USI-As-UgE" firstAttribute="centerY" secondItem="2WI-2e-dot" secondAttribute="centerY" id="3X8-wo-p10"/>
-                                                <constraint firstItem="2WI-2e-dot" firstAttribute="leading" secondItem="Hxc-t6-cOW" secondAttribute="leading" constant="16" id="C43-VK-D7d"/>
+                                                <constraint firstItem="2WI-2e-dot" firstAttribute="leading" secondItem="Hxc-t6-cOW" secondAttribute="leading" constant="20" id="C43-VK-D7d"/>
                                                 <constraint firstItem="USI-As-UgE" firstAttribute="top" secondItem="Hxc-t6-cOW" secondAttribute="top" constant="16" id="PAC-bh-Rf1"/>
                                                 <constraint firstAttribute="bottom" secondItem="USI-As-UgE" secondAttribute="bottom" constant="16" id="Vem-Xy-6tG"/>
                                                 <constraint firstAttribute="trailing" secondItem="USI-As-UgE" secondAttribute="trailing" constant="20" symbolic="YES" id="YkR-uP-X38"/>
@@ -234,6 +234,7 @@
                                                         <constraint firstItem="IQl-kw-JaZ" firstAttribute="top" secondItem="oxF-rx-d6G" secondAttribute="topMargin" id="qVi-eK-Ghk"/>
                                                     </constraints>
                                                 </tableViewCellContentView>
+                                                <color key="backgroundColor" red="0.98039215690000003" green="0.98039215690000003" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
                                                 <connections>
                                                     <outlet property="delBtn" destination="CiY-YU-rEy" id="bl6-jD-35T"/>
                                                     <outlet property="photoLb" destination="IQl-kw-JaZ" id="kdA-Zi-v1d"/>
@@ -249,18 +250,17 @@
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="사용일시" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4AC-no-WDQ">
-                                                            <rect key="frame" x="15" y="19" width="59" height="20"/>
-                                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                                            <rect key="frame" x="15" y="19" width="59" height="20.5"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="사용날짜를 입력하세요" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7W1-Rm-52y">
-                                                            <rect key="frame" x="107" y="8" width="248" height="42"/>
+                                                            <rect key="frame" x="114" y="4" width="241" height="50"/>
                                                             <constraints>
-                                                                <constraint firstAttribute="height" constant="42" id="oth-fr-IGZ"/>
-                                                                <constraint firstAttribute="width" constant="248" id="sgL-rj-wOe"/>
+                                                                <constraint firstAttribute="height" constant="50" id="oth-fr-IGZ"/>
                                                             </constraints>
-                                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                                             <textInputTraits key="textInputTraits"/>
                                                         </textField>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ico-arrow-small-d-right" translatesAutoresizingMaskIntoConstraints="NO" id="mzb-yP-a7a">
@@ -271,12 +271,14 @@
                                                             </constraints>
                                                         </imageView>
                                                     </subviews>
+                                                    <color key="backgroundColor" red="0.98039215690000003" green="0.98039215690000003" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="bottom" secondItem="7W1-Rm-52y" secondAttribute="bottom" constant="8" id="2k5-tT-3PJ"/>
+                                                        <constraint firstAttribute="bottom" secondItem="7W1-Rm-52y" secondAttribute="bottom" constant="4" id="2k5-tT-3PJ"/>
                                                         <constraint firstAttribute="trailingMargin" secondItem="mzb-yP-a7a" secondAttribute="trailing" constant="5" id="5zn-Ak-s1J"/>
+                                                        <constraint firstItem="7W1-Rm-52y" firstAttribute="leading" secondItem="4AC-no-WDQ" secondAttribute="trailing" constant="40" id="LA6-0E-oiz"/>
                                                         <constraint firstItem="4AC-no-WDQ" firstAttribute="leading" secondItem="cby-ZI-RAh" secondAttribute="leadingMargin" id="e5k-h9-J0g"/>
                                                         <constraint firstAttribute="trailing" secondItem="7W1-Rm-52y" secondAttribute="trailing" constant="20" id="hf0-eP-g9k"/>
-                                                        <constraint firstItem="7W1-Rm-52y" firstAttribute="top" secondItem="cby-ZI-RAh" secondAttribute="top" constant="8" id="iLk-YF-216"/>
+                                                        <constraint firstItem="7W1-Rm-52y" firstAttribute="top" secondItem="cby-ZI-RAh" secondAttribute="top" constant="4" id="iLk-YF-216"/>
                                                         <constraint firstItem="mzb-yP-a7a" firstAttribute="centerY" secondItem="7W1-Rm-52y" secondAttribute="centerY" id="j86-sa-8FL"/>
                                                         <constraint firstItem="7W1-Rm-52y" firstAttribute="centerY" secondItem="4AC-no-WDQ" secondAttribute="centerY" id="oPQ-vJ-0EG"/>
                                                         <constraint firstAttribute="trailingMargin" secondItem="7W1-Rm-52y" secondAttribute="trailing" constant="5" id="zPf-4I-44i"/>
@@ -412,12 +414,6 @@
                                             <constraint firstAttribute="width" secondItem="pyn-8N-NaW" secondAttribute="height" multiplier="31:22" id="Lmk-S4-z5E"/>
                                         </constraints>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="사용일시" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gOk-st-guH">
-                                        <rect key="frame" x="20" y="301" width="59" height="20"/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="사용날짜를 입력하세요" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="klG-Cp-FKC">
                                         <rect key="frame" x="107" y="290" width="248" height="42"/>
                                         <constraints>
@@ -572,6 +568,12 @@
                                         </constraints>
                                         <state key="normal" backgroundImage="ico-del-img"/>
                                     </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="사용일시" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gOk-st-guH">
+                                        <rect key="frame" x="20" y="301" width="59" height="20"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" red="0.98039215690000003" green="0.98039215690000003" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>

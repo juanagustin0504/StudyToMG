@@ -47,6 +47,8 @@ class ContentCell: UITableViewCell {
         super.awakeFromNib()
         
         self.selectionStyle = .none
+        myViewStyle(contentTF, color: .lightGray)
+        contentTF.layer.sublayerTransform = CATransform3DMakeTranslation(10, 0, 0);
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {
