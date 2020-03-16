@@ -196,10 +196,10 @@
                                                     <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="사진" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IQl-kw-JaZ">
-                                                            <rect key="frame" x="23" y="11" width="29.5" height="20.5"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="사아진" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IQl-kw-JaZ">
+                                                            <rect key="frame" x="23" y="11" width="48" height="20.5"/>
                                                             <constraints>
-                                                                <constraint firstAttribute="width" constant="29.5" id="5QW-ov-Yd5"/>
+                                                                <constraint firstAttribute="width" constant="48" id="MkS-NV-jB4"/>
                                                             </constraints>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
@@ -226,7 +226,7 @@
                                                     <constraints>
                                                         <constraint firstItem="IQl-kw-JaZ" firstAttribute="leading" secondItem="oxF-rx-d6G" secondAttribute="leadingMargin" constant="8" id="4Rk-zs-Uba"/>
                                                         <constraint firstAttribute="trailingMargin" secondItem="CiY-YU-rEy" secondAttribute="trailing" constant="12" id="EhJ-rg-vQP"/>
-                                                        <constraint firstItem="wCq-Z5-yL0" firstAttribute="leading" secondItem="IQl-kw-JaZ" secondAttribute="trailing" constant="62.5" id="bVp-Jq-HQX"/>
+                                                        <constraint firstItem="wCq-Z5-yL0" firstAttribute="leading" secondItem="IQl-kw-JaZ" secondAttribute="trailing" constant="44" id="bVp-Jq-HQX"/>
                                                         <constraint firstItem="wCq-Z5-yL0" firstAttribute="trailing" secondItem="oxF-rx-d6G" secondAttribute="trailingMargin" id="bXf-3X-mTc"/>
                                                         <constraint firstItem="wCq-Z5-yL0" firstAttribute="top" secondItem="oxF-rx-d6G" secondAttribute="topMargin" id="fQ0-7f-mvc"/>
                                                         <constraint firstAttribute="bottomMargin" secondItem="wCq-Z5-yL0" secondAttribute="bottom" constant="4" id="nLk-rc-ZGY"/>

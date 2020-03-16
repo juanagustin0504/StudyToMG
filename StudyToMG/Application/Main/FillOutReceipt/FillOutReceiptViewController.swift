@@ -106,13 +106,14 @@ extension FillOutReceiptViewController : UITableViewDataSource {
             }
             
             if indexPath.row == 0 {
-                cell.photoLb.text = "사진" // 별 추가
+                cell.photoLb.attributedText = "사진".addAsterix(at: .first)
             } else {
-                cell.photoLb.text = ""
+                cell.photoLb.attributedText = .none
             }
             
             if photoArr.count != 0, indexPath.row != photoArr.count {
                 cell.photoView.image = self.photoArr[indexPath.row]
+                cell.photoView.contentMode = .scaleToFill
                 cell.delBtn.isHidden = false
             } else {
                 cell.delBtn.isHidden = true
