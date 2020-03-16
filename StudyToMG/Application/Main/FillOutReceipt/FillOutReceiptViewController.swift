@@ -11,7 +11,14 @@ import UIKit
 class FillOutReceiptViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var footerView: UIStackView!
+    @IBOutlet weak var payTypeCash: UIView!
+    @IBOutlet weak var payTypeAccount: UIView!
+    @IBOutlet weak var payTypeOther: UIView!
+    
+    @IBOutlet weak var checkCashImg: UIImageView!
+    @IBOutlet weak var checkAccountImg: UIImageView!
+    @IBOutlet weak var checkOtherImg: UIImageView!
+    
     
     @IBOutlet weak var REG_DTM: UILabel! {
         didSet {
@@ -26,6 +33,8 @@ class FillOutReceiptViewController: UIViewController {
     var contentArr: [String] = ["사용일시", "증빙제목", "사용내역", "사용금액"]
     var contentDscrArr: [String] = ["사용날짜를 입력하세요", "목록에 보여질 제목을 입력하세요", "사용 내역을 입력하세요", "금액을 입력하세요"]
     
+    let checkImgs: [UIImage?] = [UIImage(named: "ico-info-middle-d-check.png"), UIImage(named: "ico-info-check.png")]
+    
     let picker = UIImagePickerController()
     
     override func viewDidLoad() {
@@ -36,6 +45,10 @@ class FillOutReceiptViewController: UIViewController {
         self.tableView.delegate = self
         self.tableView.dataSource = self
         
+        let tap = UITapGestureRecognizer(target: self, action: #selector(self.handleTap(_:)))
+        self.payTypeCash.addGestureRecognizer(tap)
+        self.payTypeAccount.addGestureRecognizer(tap)
+        self.payTypeOther.addGestureRecognizer(tap)
     }
     
     @IBAction func cancelBtnTapped(_ sender: UIButton) {
@@ -50,6 +63,26 @@ class FillOutReceiptViewController: UIViewController {
         
     }
     
+    @objc func handleTap(_ sender: UITapGestureRecognizer? = nil) {
+        // handling code
+        let tag = sender?.view?.tag
+        switch tag {
+        case 0:
+            self.checkCashImg.image = self.checkImgs[1]
+            self.checkAccountImg.image = self.checkImgs[0]
+            self.checkOtherImg.image = self.checkImgs[0]
+        case 1:
+            self.checkCashImg.image = self.checkImgs[0]
+            self.checkAccountImg.image = self.checkImgs[1]
+            self.checkOtherImg.image = self.checkImgs[0]
+        case 2:
+            self.checkCashImg.image = self.checkImgs[0]
+            self.checkAccountImg.image = self.checkImgs[0]
+            self.checkOtherImg.image = self.checkImgs[1]
+        default:
+            print("Default")
+        }
+    }
     
     func openLibrary() {
         self.picker.sourceType = .photoLibrary

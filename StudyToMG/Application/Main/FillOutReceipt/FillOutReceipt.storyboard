@@ -122,7 +122,7 @@
                                                                 <constraint firstAttribute="bottom" secondItem="IZW-dT-lar" secondAttribute="bottom" constant="1" id="iRc-m4-vPW"/>
                                                             </constraints>
                                                         </view>
-                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="61N-J5-EzT">
+                                                        <view tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="61N-J5-EzT">
                                                             <rect key="frame" x="74" y="0.0" width="62" height="26"/>
                                                             <subviews>
                                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ico-info-middle-d-check" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qYI-w0-wND">
@@ -149,7 +149,7 @@
                                                                 <constraint firstItem="qYI-w0-wND" firstAttribute="top" secondItem="61N-J5-EzT" secondAttribute="top" constant="1" id="w96-vE-DY4"/>
                                                             </constraints>
                                                         </view>
-                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AaT-uv-z93">
+                                                        <view tag="2" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AaT-uv-z93">
                                                             <rect key="frame" x="148" y="0.0" width="62" height="26"/>
                                                             <subviews>
                                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ico-info-middle-d-check" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="s0R-aS-ShQ">
@@ -323,7 +323,12 @@
                     </view>
                     <connections>
                         <outlet property="REG_DTM" destination="bjB-i9-lPp" id="0P5-p5-hDI"/>
-                        <outlet property="footerView" destination="USI-As-UgE" id="4wC-Yc-gQh"/>
+                        <outlet property="checkAccountImg" destination="qYI-w0-wND" id="vYi-Wk-EXf"/>
+                        <outlet property="checkCashImg" destination="IZW-dT-lar" id="KMp-y8-nXu"/>
+                        <outlet property="checkOtherImg" destination="s0R-aS-ShQ" id="1Aa-9z-dD0"/>
+                        <outlet property="payTypeAccount" destination="61N-J5-EzT" id="QAv-5O-hNW"/>
+                        <outlet property="payTypeCash" destination="ZEy-bI-Qs5" id="AAd-hV-59a"/>
+                        <outlet property="payTypeOther" destination="AaT-uv-z93" id="8W4-HP-Pfe"/>
                         <outlet property="tableView" destination="nPN-D7-N2Y" id="hvv-N0-vRw"/>
                     </connections>
                 </viewController>
