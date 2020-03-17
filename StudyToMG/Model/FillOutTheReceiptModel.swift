@@ -16,13 +16,13 @@ struct SCMS_METC_C003 {
         struct REQ_DATA: Encodable {
             let RCPT_TYPE   : String
             let FILE_URL    : String
-            let TRSC_DT     : String?
-            let TRSC_TM     : String?
-            let TX_AMT      : String?
-            let USE_USAG_CD : String?
-            let BZAQ_NM     : String?
+            let TRSC_DT     : String
+            let TRSC_TM     : String
+            let TX_AMT      : String
+            let USE_USAG_CD : String
+            let BZAQ_NM     : String
             let APPR_CONT   : String
-            let PAY_TYPE_CD : String?
+            let PAY_TYPE_CD : String
         }
     }
     

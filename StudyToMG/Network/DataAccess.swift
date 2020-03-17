@@ -76,6 +76,9 @@ class DataAccess {
                                   ENC_YN: "",
                                   REQ_DATA: requestBody)
         
+        print(":::::FETCH REQUEST:::::")
+        print(requestData)
+        
         let session = URLSession(configuration: .default)
         
         var request = URLRequest(url: URL)

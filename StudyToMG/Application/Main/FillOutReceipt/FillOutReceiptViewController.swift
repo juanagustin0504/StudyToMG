@@ -29,13 +29,24 @@ class FillOutReceiptViewController: UIViewController {
         }
     }
     
+    var FILE_URL    : String?
+    var TRSC_DT     : String?
+    var TRSC_TM     : String?
+    var TX_AMT      : String?
+    var USE_USAG_CD : String?
+    var BZAQ_NM     : String?
+    var APPR_CONT   : String?
+    var PAY_TYPE_CD : String?
+    
     var photoArr: [UIImage?] = []
     var contentArr: [String] = ["사용일시", "증빙제목", "사용내역", "사용금액"]
     var contentDscrArr: [String] = ["사용날짜를 입력하세요", "목록에 보여질 제목을 입력하세요", "사용 내역을 입력하세요", "금액을 입력하세요"]
+    var fileURL: [String] = []
     
     let checkImgs: [UIImage?] = [UIImage(named: "ico-info-middle-d-check.png"), UIImage(named: "ico-info-check.png")]
     
     let picker = UIImagePickerController()
+    let fillOutTheReceiptViewModel: FillOutTheReceiptViewModel = FillOutTheReceiptViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -58,6 +69,23 @@ class FillOutReceiptViewController: UIViewController {
     }
     
     @IBAction func okBtnTapped(_ sender: UIButton) {
+        self.fillOutTheReceiptViewModel.request_SCMS_METC_C003(
+            RCPT_TYPE: "R",
+            FILE_URL: "",
+            TRSC_DT: "",
+            TRSC_TM: "",
+            TX_AMT: "",
+            USE_USAG_CD: "",
+            BZAQ_NM: "ttestt",
+            APPR_CONT: "ttestt",
+            USER_NM: "",
+            PAY_TYPE_CD: "1") { (error) in
+                if error != nil {
+                    print("FillOutTheReceiptRequest Error ::::: \(error!)")
+                    return
+                }
+                print(self.fillOutTheReceiptViewModel.responseObj?.RESP_DATA.REG_SEQ_NO)
+        }
         self.navigationController?.popViewController(animated: true)
     }
     
@@ -113,6 +141,11 @@ extension FillOutReceiptViewController : UIImagePickerControllerDelegate, UINavi
                     self.tableView.reloadData()
                 }
             }
+        }
+        
+        if let imageUrl = info[.referenceURL] as? URL {
+            print(imageUrl)
+            self.fileURL.append(imageUrl.absoluteString)
         }
     }
     
