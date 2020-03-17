@@ -11,6 +11,7 @@
 		760A26CE241B6E4C0064F766 /* FillOutReceiptViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 760A26CD241B6E4C0064F766 /* FillOutReceiptViewController.swift */; };
 		760A26D1241B8D5A0064F766 /* FillOutReceiptCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 760A26D0241B8D5A0064F766 /* FillOutReceiptCell.swift */; };
 		76980223241F67930020692F /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76980222241F67930020692F /* String.swift */; };
+		7698022524209D080020692F /* FillOutTheReceiptModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7698022424209D080020692F /* FillOutTheReceiptModel.swift */; };
 		76996536241A0D4D00EFEFA6 /* Detail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76996535241A0D4D00EFEFA6 /* Detail.storyboard */; };
 		76996538241A120C00EFEFA6 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76996537241A120C00EFEFA6 /* DetailViewController.swift */; };
 		76BE44422406732E004430B7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76BE44412406732E004430B7 /* AppDelegate.swift */; };
@@ -45,6 +46,7 @@
 		760A26CD241B6E4C0064F766 /* FillOutReceiptViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FillOutReceiptViewController.swift; sourceTree = "<group>"; };
 		760A26D0241B8D5A0064F766 /* FillOutReceiptCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FillOutReceiptCell.swift; sourceTree = "<group>"; };
 		76980222241F67930020692F /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		7698022424209D080020692F /* FillOutTheReceiptModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FillOutTheReceiptModel.swift; sourceTree = "<group>"; };
 		76996535241A0D4D00EFEFA6 /* Detail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Detail.storyboard; sourceTree = "<group>"; };
 		76996537241A120C00EFEFA6 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		76BE443E2406732E004430B7 /* StudyToMG.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StudyToMG.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -282,6 +284,7 @@
 			children = (
 				76BE448C240F2FF0004430B7 /* ReceiptModel.swift */,
 				76BE4490240F3268004430B7 /* MultiReceiptModel.swift */,
+				7698022424209D080020692F /* FillOutTheReceiptModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -382,6 +385,7 @@
 				76BE4489240E5FC6004430B7 /* MultiReceiptCell.swift in Sources */,
 				76BE4477240E4DE7004430B7 /* Type.swift in Sources */,
 				76BE4487240E5FA1004430B7 /* ReceiptCell.swift in Sources */,
+				7698022524209D080020692F /* FillOutTheReceiptModel.swift in Sources */,
 				76BE4465240CC8C5004430B7 /* MainViewController.swift in Sources */,
 				76BE4473240D0C6E004430B7 /* Response.swift in Sources */,
 				76BE4493240F34D6004430B7 /* ReceiptViewModel.swift in Sources */,

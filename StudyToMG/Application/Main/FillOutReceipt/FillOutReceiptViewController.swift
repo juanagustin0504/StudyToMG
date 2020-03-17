@@ -45,10 +45,12 @@ class FillOutReceiptViewController: UIViewController {
         self.tableView.delegate = self
         self.tableView.dataSource = self
         
-        let tap = UITapGestureRecognizer(target: self, action: #selector(self.handleTap(_:)))
-        self.payTypeCash.addGestureRecognizer(tap)
-        self.payTypeAccount.addGestureRecognizer(tap)
-        self.payTypeOther.addGestureRecognizer(tap)
+        let tap1 = UITapGestureRecognizer(target: self, action: #selector(self.handleTap(_:)))
+        self.payTypeCash.addGestureRecognizer(tap1)
+        let tap2 = UITapGestureRecognizer(target: self, action: #selector(self.handleTap(_:)))
+        self.payTypeAccount.addGestureRecognizer(tap2)
+        let tap3 = UITapGestureRecognizer(target: self, action: #selector(self.handleTap(_:)))
+        self.payTypeOther.addGestureRecognizer(tap3)
     }
     
     @IBAction func cancelBtnTapped(_ sender: UIButton) {
