@@ -184,11 +184,11 @@ extension FillOutReceiptViewController : UITableViewDataSource {
             if photoArr.count != 0, indexPath.row != photoArr.count {
                 cell.photoView.image = self.photoArr[indexPath.row]
                 cell.photoView.contentMode = .scaleToFill
-                cell.delBtn.isHidden = false
+                cell.delBtnImgView.isHidden = false
             } else {
                 cell.photoView.image = UIImage(named: "ic-camera.png")
                 cell.photoView.contentMode = .center
-                cell.delBtn.isHidden = true
+                cell.delBtnImgView.isHidden = true
             }
             return cell
         } else if indexPath.section == 1 {

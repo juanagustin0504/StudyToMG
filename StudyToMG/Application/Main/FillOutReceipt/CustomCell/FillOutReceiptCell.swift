@@ -18,7 +18,8 @@ class PhotoCell: UITableViewCell {
             self.photoView.image = photo
         }
     }
-    @IBOutlet weak var delBtn: UIButton!
+    @IBOutlet weak var delBtnImgView: UIImageView!
+    
     
     let photo = UIImage(named: "ic-camera.png")
     
@@ -26,7 +27,6 @@ class PhotoCell: UITableViewCell {
         super.awakeFromNib()
         
         myViewStyle(self.receiptImageView, color: .lightGray)
-        self.delBtn.tintColor = .lightGray
         self.selectionStyle = .none
         
         let tap = UITapGestureRecognizer(target: self, action: #selector(handlerTap(_:)))

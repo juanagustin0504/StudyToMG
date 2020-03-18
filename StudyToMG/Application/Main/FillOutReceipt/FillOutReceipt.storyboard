@@ -211,29 +211,28 @@
                                                                 <constraint firstAttribute="width" secondItem="wCq-Z5-yL0" secondAttribute="height" multiplier="245:174" id="sSj-JW-hSf"/>
                                                             </constraints>
                                                         </imageView>
-                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CiY-YU-rEy">
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ico-del-img" translatesAutoresizingMaskIntoConstraints="NO" id="d6J-j5-Ktz">
                                                             <rect key="frame" x="324" y="23" width="24" height="24"/>
                                                             <constraints>
-                                                                <constraint firstAttribute="width" constant="24" id="Rat-Xq-Fur"/>
-                                                                <constraint firstAttribute="height" constant="24" id="lF4-Ro-64Q"/>
+                                                                <constraint firstAttribute="width" constant="24" id="LZP-D9-cgO"/>
+                                                                <constraint firstAttribute="height" constant="24" id="wqa-JR-U6O"/>
                                                             </constraints>
-                                                            <state key="normal" backgroundImage="ico-del-img"/>
-                                                        </button>
+                                                        </imageView>
                                                     </subviews>
                                                     <constraints>
                                                         <constraint firstItem="IQl-kw-JaZ" firstAttribute="leading" secondItem="oxF-rx-d6G" secondAttribute="leadingMargin" constant="8" id="4Rk-zs-Uba"/>
-                                                        <constraint firstAttribute="trailingMargin" secondItem="CiY-YU-rEy" secondAttribute="trailing" constant="12" id="EhJ-rg-vQP"/>
+                                                        <constraint firstItem="d6J-j5-Ktz" firstAttribute="top" secondItem="oxF-rx-d6G" secondAttribute="topMargin" constant="12" id="LFf-ef-HNh"/>
+                                                        <constraint firstAttribute="trailingMargin" secondItem="d6J-j5-Ktz" secondAttribute="trailing" constant="12" id="YE9-f8-4ld"/>
                                                         <constraint firstItem="wCq-Z5-yL0" firstAttribute="leading" secondItem="IQl-kw-JaZ" secondAttribute="trailing" constant="44" id="bVp-Jq-HQX"/>
                                                         <constraint firstItem="wCq-Z5-yL0" firstAttribute="trailing" secondItem="oxF-rx-d6G" secondAttribute="trailingMargin" id="bXf-3X-mTc"/>
                                                         <constraint firstItem="wCq-Z5-yL0" firstAttribute="top" secondItem="oxF-rx-d6G" secondAttribute="topMargin" id="fQ0-7f-mvc"/>
                                                         <constraint firstAttribute="bottomMargin" secondItem="wCq-Z5-yL0" secondAttribute="bottom" constant="4" id="nLk-rc-ZGY"/>
-                                                        <constraint firstItem="CiY-YU-rEy" firstAttribute="top" secondItem="oxF-rx-d6G" secondAttribute="topMargin" constant="12" id="nOp-k7-kAM"/>
                                                         <constraint firstItem="IQl-kw-JaZ" firstAttribute="top" secondItem="oxF-rx-d6G" secondAttribute="topMargin" id="qVi-eK-Ghk"/>
                                                     </constraints>
                                                 </tableViewCellContentView>
                                                 <color key="backgroundColor" red="0.98039215690000003" green="0.98039215690000003" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
                                                 <connections>
-                                                    <outlet property="delBtn" destination="CiY-YU-rEy" id="bl6-jD-35T"/>
+                                                    <outlet property="delBtnImgView" destination="d6J-j5-Ktz" id="UdZ-2A-iQ3"/>
                                                     <outlet property="photoLb" destination="IQl-kw-JaZ" id="kdA-Zi-v1d"/>
                                                     <outlet property="photoView" destination="wCq-Z5-yL0" id="5wG-0l-otM"/>
                                                     <outlet property="receiptImageView" destination="wCq-Z5-yL0" id="ugM-5k-MTt"/>
