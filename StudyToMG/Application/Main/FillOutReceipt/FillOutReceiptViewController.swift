@@ -123,13 +123,12 @@ extension FillOutReceiptViewController : UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if indexPath.section == 0, indexPath.row == photoArr.count {
             self.openLibrary()
-        } else {
+        } else if indexPath.section == 0 {
             DispatchQueue.main.async {
                 self.photoArr.remove(at: indexPath.row)
                 self.tableView.deleteRows(at: [indexPath], with: .fade)
                 self.tableView.reloadData()
             }
-            
         }
     }
 }
