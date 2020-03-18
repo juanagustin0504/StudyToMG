@@ -29,18 +29,11 @@ class PhotoCell: UITableViewCell {
         myViewStyle(self.receiptImageView, color: .lightGray)
         self.selectionStyle = .none
         
-        let tap = UITapGestureRecognizer(target: self, action: #selector(handlerTap(_:)))
-        receiptImageView.addGestureRecognizer(tap)
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
         
-        print("setSelected \(self.receiptImageView.debugDescription)")
-    }
-    
-    @objc func handlerTap(_ sender: UITapGestureRecognizer) {
-        print("Taptap!")
     }
 
 }

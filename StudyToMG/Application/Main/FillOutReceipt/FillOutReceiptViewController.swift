@@ -110,6 +110,14 @@ class FillOutReceiptViewController: UIViewController {
         }
     }
     
+    func keyboardWillShow() {
+        self.view.frame.origin.y = -150
+    }
+    
+    func keyboardWillHide() {
+        self.view.frame.origin.y = 0
+    }
+    
     func openLibrary() {
         self.picker.sourceType = .photoLibrary
         self.picker.modalPresentationStyle = .fullScreen
@@ -129,6 +137,9 @@ extension FillOutReceiptViewController : UITableViewDelegate {
                 self.tableView.deleteRows(at: [indexPath], with: .fade)
                 self.tableView.reloadData()
             }
+        } else {
+            self.keyboardWillHide()
+            self.view.endEditing(true)
         }
     }
 }
@@ -151,6 +162,21 @@ extension FillOutReceiptViewController : UIImagePickerControllerDelegate, UINavi
         }
     }
     
+}
+
+extension FillOutReceiptViewController: UITextFieldDelegate {
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        self.keyboardWillShow()
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        self.keyboardWillHide()
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
 }
 
 //MARK: - dataSource -
@@ -197,6 +223,7 @@ extension FillOutReceiptViewController : UITableViewDataSource {
             }
             cell.titleLb.text = contentArr[indexPath.row]
             cell.contentTF.placeholder = contentDscrArr[indexPath.row]
+            cell.contentTF.delegate = self
             return cell
         }
         
