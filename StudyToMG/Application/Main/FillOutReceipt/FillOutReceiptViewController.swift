@@ -89,10 +89,6 @@ class FillOutReceiptViewController: UIViewController {
         self.navigationController?.popViewController(animated: true)
     }
     
-    @IBAction func deletePhotoBtnTapped(_ sender: UIButton) {
-        
-    }
-    
     @objc func handleTap(_ sender: UITapGestureRecognizer? = nil) {
         // handling code
         let tag = sender?.view?.tag
@@ -127,6 +123,13 @@ extension FillOutReceiptViewController : UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if indexPath.section == 0, indexPath.row == photoArr.count {
             self.openLibrary()
+        } else {
+            DispatchQueue.main.async {
+                self.photoArr.remove(at: indexPath.row)
+                self.tableView.deleteRows(at: [indexPath], with: .fade)
+                self.tableView.reloadData()
+            }
+            
         }
     }
 }
@@ -160,9 +163,9 @@ extension FillOutReceiptViewController : UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if section == 0 {
-            return photoArr.count + 1
+            return self.photoArr.count + 1
         } else if section == 1 {
-            return contentArr.count
+            return self.contentArr.count
         }
         return 0
     }
@@ -185,6 +188,7 @@ extension FillOutReceiptViewController : UITableViewDataSource {
                 cell.delBtn.isHidden = false
             } else {
                 cell.photoView.image = UIImage(named: "ic-camera.png")
+                cell.photoView.contentMode = .center
                 cell.delBtn.isHidden = true
             }
             return cell
