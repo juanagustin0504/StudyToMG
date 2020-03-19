@@ -22,19 +22,21 @@ class FillOutTheReceiptViewModel {
                                 USER_NM: String,
                                 PAY_TYPE_CD: String,
                                 completion: @escaping (NSError?) -> Void) {
-        let requestBody = SCMS_METC_C003.Request.REQ_DATA(
-                RCPT_TYPE: RCPT_TYPE,
-                FILE_URL: FILE_URL,
-                TRSC_DT: TRSC_DT,
-                TRSC_TM: TRSC_TM,
-                TX_AMT: TX_AMT,
-                USE_USAG_CD: USE_USAG_CD,
-                BZAQ_NM: BZAQ_NM,
-                APPR_CONT: APPR_CONT,
-                PAY_TYPE_CD: PAY_TYPE_CD)
+//        let requestBody = SCMS_METC_C003.Request.REQ_DATA(
+//                RCPT_TYPE: RCPT_TYPE,
+//                FILE_URL: FILE_URL,
+//                TRSC_DT: TRSC_DT,
+//                TRSC_TM: TRSC_TM,
+//                TX_AMT: TX_AMT,
+//                USE_USAG_CD: USE_USAG_CD,
+//                BZAQ_NM: BZAQ_NM,
+//                APPR_CONT: APPR_CONT,
+//                PAY_TYPE_CD: PAY_TYPE_CD)
+        
+        let reqBody = SCMS_METC_C003.Request(REQ_DATA: SCMS_METC_C003.Request.REQ_DATA(RCPT_TYPE: RCPT_TYPE, FILE_URL: FILE_URL, TRSC_DT: TRSC_DT, TRSC_TM: TRSC_TM, TX_AMT: TX_AMT, USE_USAG_CD: USE_USAG_CD, BZAQ_NM: BZAQ_NM, APPR_CONT: APPR_CONT, PAY_TYPE_CD: PAY_TYPE_CD))
         
         let api = "SCMS_METC_C0003"
-        DataAccess.shared.fetch(api: api, requestBody: requestBody, responseType: Response<SCMS_METC_C003.Response>.self) { (result) in
+        DataAccess.shared.fetch(api: api, requestBody: reqBody, responseType: Response<SCMS_METC_C003.Response>.self) { (result) in
             switch result {
             case .failure(let error):
                 print("result error in ViewModel : \(error)")

@@ -24,7 +24,7 @@ class MGViewModel {
                 print(responseObj)
                 self.mgResponseObj = responseObj
                 SharedInstance.shared.mgData = responseObj
-                SharedInstance.shared.c_site_url = responseObj.RESP_DATA._tran_res_data[0].c_site_url
+                SharedInstance.shared.c_site_url = responseObj.RESP_DATA._tran_res_data[0].c_site_url // http://devsemo.wecontent.co.kr
                 completion(nil)
             }
         }
